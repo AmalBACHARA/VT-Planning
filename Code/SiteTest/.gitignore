@@ -1,0 +1,7 @@
+Site/templates_c/
+
+tmpls/*
+
+Site/config/*
+
+API/node_modules/*

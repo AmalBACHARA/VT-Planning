@@ -1,0 +1,16 @@
+#devInfoList
+{
+    text-align: left;
+}
+
+.panel-body
+{
+    padding: 0px !important;
+    text-align: left;
+}
+
+li
+{
+    list-style-type: none;
+}
+

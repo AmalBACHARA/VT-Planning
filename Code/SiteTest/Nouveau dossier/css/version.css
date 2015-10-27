@@ -1,0 +1,22 @@
+/* CSS used here will be applied after bootstrap.css */
+
+.panel-body {
+    padding: 0px !important;
+    text-align: left;
+}
+li {
+    list-style-type: none;
+}
+.col-centered,
+#myTab {
+    float: none !important;
+    margin: 0 auto !important;
+}
+
+.panel-heading a
+{
+    text-decoration: none ;
+}
+.panel-heading:hover {
+    cursor: pointer;
+}
