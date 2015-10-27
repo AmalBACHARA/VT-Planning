@@ -2,8 +2,11 @@
 div id="panelFilter">
 </div>
 -->
-    <!-- The styles -->
 
+    <!-- The styles -->
+    <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
+
+    <link href="css/charisma-app.css" rel="stylesheet">
     <link href='bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
     <link href='bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
     <link href='bower_components/chosen/chosen.min.css' rel='stylesheet'>
@@ -12,16 +15,123 @@ div id="panelFilter">
     <link href='bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
     <link href='css/jquery.noty.css' rel='stylesheet'>
     <link href='css/noty_theme_default.css' rel='stylesheet'>
-    <link href='css/elfinder.min.css' rel='stylesheet'>
     <link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
     <link href='css/uploadify.css' rel='stylesheet'>
+    <link href='css/animate.min.css' rel='stylesheet'>
 
     <!-- jQuery -->
     <script src="bower_components/jquery/jquery.min.js"></script>
 	
-        <div id="content" class="col-lg-10 col-sm-10">
-	<!-- Début navigation calendar -->
-	    <div class="row">
+	
+	<div class="col-lg-2 col-sm-2">
+    <button class="btn btn-primary" id="monPlanning" type="submit" onClick='reset({$code})'>Mon planning</button>
+ <!--</form>-->
+    <div class="col-md-12 col-centered">
+	<div class="panel panel-default" id="premierGroupeFiltre">
+	    <div class="panel-heading"> 
+                <form class="form-horizontal" role="form">
+		    <div class="form-group">
+			<label for="groupesFilter" class="col-md-12">Groupes</label>
+			    <div class="col-md-12">
+				<select name="groupesFilter" class="form-control" id="groupesFilter" required="" onChange="loadGroupesListFilter()">
+				    <option value="all" selected>TOUS</option>
+                                    {foreach from=$formations item=formation}
+                                        <option value={$formation.codeNiveau}>{$formation.nom}</option>
+                                    {/foreach}
+				</select>
+                            </div>
+			</div>
+                </form>                                     
+	    </div>
+	    <div class="panel-body">
+		<form class="form-horizontal" role="form">
+		    <div class="form-group">
+			<div class="col-md-12">
+			    <select name="groupesFormationsFilter" class="form-control" id="groupesFormationsFilter" required="" onChange="updateCalendar()">
+				<option value="all" selected>TOUS</option>
+                                {foreach from=$groupes item=groupe}
+                                    <option value={$groupe.codeGroupe}>{$groupe.nom}</option>
+				{/foreach}
+			    </select>
+			</div>
+		    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-12 col-centered">
+	<div class="panel panel-default">
+	    <div class="panel-heading"> 
+                <form class="form-horizontal" role="form">
+		    <div class="form-group">
+			<label for="profsComposantesFilter" class="col-md-12">Profs</label>
+			    <div class="col-md-12">
+				<select name="profsComposantesFilter" class="form-control" id="profsComposantesFilter" required="" onChange='loadProfsListFilter({$code})'>
+				    <option value="all" selected>TOUS</option>
+                                    {foreach from=$composantes item=composante}
+					<option value={$composante.codeComposante}>{$composante.nom}</option>
+				    {/foreach}
+				</select>
+                            </div>
+			</div>
+                </form>                                     
+	    </div>
+	    <div class="panel-body">
+		<form class="form-horizontal" role="form">
+		    <div class="form-group">
+			<div class="col-md-12">
+			    <select name="profsFilter" class="form-control" id="profsFilter" required="" onChange="updateCalendar()">
+				{foreach from=$profs item=prof}
+                                    <option value={$prof.codeProf} {if $prof.codeProf == $code}selected{/if}>{$prof.nom} {$prof.prenom}</option>
+				{/foreach}
+			    </select>
+			</div>
+		    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-12 col-centered">
+	<div class="panel panel-default">
+	    <div class="panel-heading"> 
+                <form class="form-horizontal" role="form">
+		    <div class="form-group">
+			<label for="departementFilter" class="col-md-12">Salles</label>
+			    <div class="col-md-12">
+				<select name="departementFilter" class="form-control" id="departementFilter" required="" onChange="loadSallesListFilter()">
+				    <option value="all" selected>TOUS</option>
+                                    {foreach from=$departements item=departement}
+					<option value={$departement.codeZoneSalle}>{$departement.nom_zone}</option>
+				    {/foreach}
+				</select>
+                            </div>
+			</div>
+                </form>                                     
+	    </div>
+	    <div class="panel-body">
+		<form class="form-horizontal" role="form">
+		    <div class="form-group">
+			<div class="col-md-12">
+			    <select name="salleFilter" class="form-control" id="salleFilter" required="" onChange="updateCalendar()">
+				<option value="all" selected>TOUS</option>
+                                {foreach from=$salles item=salle}
+                                    <option value={$salle.codeSalle}>{$salle.nom}</option>
+				{/foreach}
+			    </select>
+			</div>
+		    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+<div id="content" class="col-lg-10 col-sm-10">
+	<div class="row">
         <div class="box col-md-12">
             <div class="box-inner">
                 <div class="box-header well" data-original-title="">
@@ -46,7 +156,7 @@ div id="panelFilter">
             </div>
         </div>
     </div><!--/row-->
-	<!-- Fin navigation calendar -->
+	<br/><br/>
 	
 
 	
@@ -75,6 +185,8 @@ div id="panelFilter">
 
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
+<!-- library for cookie management -->
+<script src="js/jquery.cookie.js"></script>
 <!-- calender plugin -->
 <script src='bower_components/moment/min/moment.min.js'></script>
 <script src='bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
@@ -99,3 +211,10 @@ div id="panelFilter">
 <script src="js/jquery.autogrow-textarea.js"></script>
 <!-- multiple file upload plugin -->
 <script src="js/jquery.uploadify-3.1.min.js"></script>
+<!-- history.js for cross-browser state change on ajax -->
+<script src="js/jquery.history.js"></script>
+<!-- application script for Charisma demo -->
+<script src="js/charisma.js"></script>
+
+
+
