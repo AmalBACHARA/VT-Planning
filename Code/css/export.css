@@ -1,0 +1,20 @@
+.col-centered,
+#exportTab {
+    float: none !important;
+    margin: 0 auto !important;
+}
+.panel-default {
+    opacity: 0.9;
+    margin-top: 30px;
+}
+.form-group.last {
+    margin-bottom: 0px;
+}
+#pdfButtons,
+#gisehButtons {
+    padding: 10px;
+}
+.myCheck {
+    margin: 0 0 0;
+	cursor: pointer;
+}
