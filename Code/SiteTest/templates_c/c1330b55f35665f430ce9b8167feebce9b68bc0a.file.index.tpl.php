@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-10-27 11:08:53
+<?php /* Smarty version Smarty-3.1.18, created on 2015-10-27 19:30:55
          compiled from "template\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:22793562f4d355151a5-04900617%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c1330b55f35665f430ce9b8167feebce9b68bc0a' => 
     array (
       0 => 'template\\index.tpl',
-      1 => 1424040540,
+      1 => 1445970650,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.18',
   'unifunc' => 'content_562f4d355ccb48_48977177',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_562f4d355ccb48_48977177')) {function content_562f4d355ccb48_48977177($_smarty_tpl) {?><html>
 	<head>
@@ -32,7 +32,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<link rel="stylesheet" href="css/common.css"/>
 
 		<script type="text/javascript" src="js/loadPage.js"></script>
-		<script type="text/javascript" src="API/bootstrap-calendar-master/components/jquery/jquery.min.js"></script>
 		<script type="text/javascript" src="API/bootstrap-calendar-master/components/underscore/underscore-min.js"></script>
 		<script type="text/javascript" src="API/bootstrap/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="API/bootstrap-calendar-master/components/jstimezonedetect/jstz.min.js"></script>
@@ -43,8 +42,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<script type="text/javascript" src="js/MobileSwipeCalendar.js"></script>
 	</head>
 	<body>
-		<?php echo $_smarty_tpl->getSubTemplate ('template/include/panelFilter.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
 		<?php echo $_smarty_tpl->getSubTemplate ('template/include/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 		<?php echo $_smarty_tpl->getSubTemplate ('template/include/calendar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
