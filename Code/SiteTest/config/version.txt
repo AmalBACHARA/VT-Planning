@@ -1,0 +1,893 @@
+AMELIORATIONS DE LA VERSION 5.2.2
+
+Interface prof
+- Dans l'export des salles vers Excel, les points ont été remplacés par des virgules pour faire plus facilement les calculs avec Excel.
+- Lorsque l'utilisateur n'avait pas les droits pour faire les exports en Pdf, il pouvait quand même voir la fonction dans le menu.
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.2.1
+
+Interface prof
+- Dans les info-bulles des réservations dans la vue mensuelle et mensuelle réduite, il y avait un petit problème d'affichage.
+- Ajout de la possibilité de cacher entièrement les réservations privées à partir du fichier config.php
+- Ajout de la possibilité de laisser les profs placer des réservations privées et publiques ou uniquement publiques à partir du fichier config.php
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.2.0
+
+Interface prof
+- Dans le bilan "Mes heures", une colonne "Cumul" a été ajoutée lors du classement chronologique.
+- Dans le bilan "Mes heures", les heures equivalent TD des CM au forfait avec séances placées étaient mal calculées.
+
+Interface etudiant
+- Dans la vue mensuelle, les infos bulles et l'accès au détail des séances ne fonctionnaient pas.
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.1.9
+
+Interface prof
+- Dans les infos-bulles des séances des profs, il y avait un problème entre la durée réelle d'une séance et la durée par défaut définie dans vt..
+- Maintenant, les réservations privées s'affichent dans une couleur différente des réservations non privées.
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.1.8
+
+Interface prof
+- Dans les infos-bulles des séances des profs, le noms du et des profs ont été ajoutés.
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.1.7
+
+Interface prof
+- Dans le bilan des salles, ajout d'un colonne donnant le taux d'occupation annuel par salle.
+- Dans le bilan des salles, correction du bug qui après un export excel continuait à générer des fichiers excel lorsqu'on changeait d'année.
+- Correction de variables mal initialisées dans "dialogue de gestion" et dans "admin".
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.1.6
+
+Interface étudiant
+- Ajout de la possibilité de choisir dans le fichier config.php l'identifiant correspondant aux DS dans la base de données de VT.
+
+Interface prof
+- Dans le bilan des salles, le graphique du taux d'occupation des salles par zone se fait maintenant sur une base de 1120h/an au lieu de 1400h comme ce qui est demandé lors des enquêtes nationales.
+- Dans le fichier config.php, on peut maintenant faire en sorte qu'une réservation privée soit totalement invisible par les autres profs au lieu de marquer "privé" sur la réservation.
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.1.5
+
+Interface prof
+- Export Giseh (uniquement pour l'université Paris10). Le code de la composante n'apparaissait pas à chaque fois pour certains enseignements au forfait.
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.1.4
+
+Il faut ajouter le champ "dialogue" en int(2) dans la table "login_prof" avec 0 comme valeur par défaut.
+
+Interface prof
+- Export Giseh (uniquement pour l'université Paris10). Les cours au forfait apparaissaient sous forme de TD.
+- Dialogue de gestion (uniquement pour l'université Paris10). Ajout de l'interface qui calcule les données nécessaires au dialogue de gestion avec l'université.
+- Lorsqu'on triait les salles par composante, il y avait un petit bug et les salles n'apparaissaient pas dans la liste déroulante.
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.1.3
+
+
+Interface prof
+- Dans "mes heures", lorsqu'on a le droit de voir les heures des autres profs le changement de prof ne se fait plus de manière automatique mais en appuyant sur le bouton "envoyer"
+- Export Giseh (uniquement pour l'université Paris10). Si le dernier enseignement du dernier prof du tableau n'avait qu'une seule séance, celle-ci n'apparaissait pas et les heures étaient reportées sur la ligne précédente.
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.1.2
+
+
+Interface prof
+- Si on n'est pas sur la semaine courante un dimanche soir et qu'on appuie sur le bouton "retour à la semaine courante" le lundi, on tombe maintenant sur la nouvelle semaine et non sur la semaine passée.
+
+Interface étudiant
+- Si on n'est pas sur la semaine courante un dimanche soir et qu'on appuie sur le bouton "retour à la semaine courante" le lundi, on tombe maintenant sur la nouvelle semaine et non sur la semaine passée.
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.1.1
+
+
+Interface prof
+- Suite a la disparition du champ "affectation" dans la table "ressources_profs", le pré-tri des profs se fait maintenant uniquement avec les composantes.
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.1.0
+
+
+Interface prof
+- Ajout d'une interface "Gestion des droits" qui permet à l'administrateur de définir les droits de chaque utilisateur.
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.0.9
+
+Il faut ajouter le champ "mes_droits" en int(2) dans la table "login_prof" avec 1 comme valeur par défaut.
+Il faut ajouter le champ "admin" en int(2) dans la table "login_prof" avec 0 comme valeur par défaut.
+
+Interface prof
+- Ajout d'une interface "Mes droits" qui permet aux utilisateurs de voir les droits qu'ils ont.
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.0.8
+
+- Il y avait un petit problème d'affichage sur la page d'accueil depuis la version 7 de firefox qui a été corrigé.
+
+Interface étudiant
+- Il y a maintenant une vue verticale, horizontale, mensuelle, mensuelle réduite et journalière.
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.0.7
+
+Interface étudiant
+- Création d'un outil "Mes DS" qui permet aux étudiants d'avoir une liste de leurs DS.
+
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.0.6
+
+Interface prof
+- Quand on est dans "Mes modules", "Mes heures", "Bilan par formation"... et qu'on se fait déconnecter par le serveur, il y a maintenant un lien qui s'affiche pour revenir à la page principale.
+- Dans "Mes heures", il y a maintenant la somme des heures effectuées en bas du tableau.
+- Dans "Mes heures, il y a maintenant un graphique qui représente l'évolution des heures au cours de l'année.
+- Dans "Occupation des salles", il y a maintenant un graphique qui représente le taux d'occupation des salles en fonction des zones.
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.0.5
+
+Interface prof
+- Ajout d'une vue mensuelle où on voit le détail des séances. L'ancienne vue mensuelle s'appelle maintenant "vue mensuelle réduite".
+- Dans le bilan par formation et dans le bilan "giseh", les vacataires et les titulaires sont distingués à l'aide du champ "titulaire" de la table "ressource_profs".
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.0.4
+
+Interface prof
+- Dans la vue mensuelle, quand on choisissait par exemple la semaine 44 de 2011, elle ne s'affichait pas.
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.0.3
+
+Interface prof
+- Il est maintenant possible de choisir avec quoi on filtre les groupes, les profs et les salles (niveau, diplome, composante, zone...). Ceci se fait dans le fichier config.php.
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.0.2
+
+Interface prof
+- Avec le login perso, si on n'a pas le droit de se mettre des rendez-vous perso, les boutons permettant de définir l'heure de début et de fin des raccourcis dans "ma config" sont maintenant cachés.
+- Les champs permettant de choisir la semaine et l'année ont été déplacés pour gagner un peu de place.
+- Lors de l'export pdf de la vue mensuelle, si la date de début était durant la dernière semaine du mois, il y avait un problème d'affichage.
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.0.1
+
+Interface prof
+- Lors d'un export PDF, les dates de début et de fin correspondent maintenant aux dates du planning visualisé.
+- Lors d'un conflit, la taille du rectangle noir est maintenant fonction du nombre de lignes à afficher.
+
+
+
+
+AMELIORATIONS DE LA VERSION 5.0.0
+
+Il faut ajouter le champ "selecMateriel" en varchar(45) dans la table "login_prof".
+Il faut ajouter les champs "couleur_groupe","couleur_prof", "couleur_salle" et "couleur_materiel" en int(3) dans la table "login_prof".
+
+Interface prof
+- Quand on affiche le planning d'un groupe, quand celui-ci est en "congé", on voit maintenant le type de congé : examen, entreprise/stage et congé.
+- Dans "Mes heures", il est maintenant possible de définir la répartition cours, td et tp de chaque type d'enseignement de VT. Cela se fait dans le fichier config.php.
+- Maintenant, on peut afficher le planning du matériel.
+- Dans "ma config", on peut choisir pour chaque ressource (salle, groupe, prof et materiel) la couleur à associer à la séance (groupe, prof ou matiere).
+- Dans mes modules, on a maintenant le matériel associé aux séances.
+- Ajout du script pour générer les fichiers ics du matériel.
+- Dans la vue verticale avec plusieurs ressources, quand on cliquait sur le bouton "Retour à la semaine actuelle" qui était en bas du planning, la largeur et la hauteur de l'écran n'étaient plus pris en compte lors de l'affichage du planning de la semaine courante.
+
+Interface étudiant
+-On voit maintenant le type de congé : examen, entreprise/stage et congé.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.4.8
+
+Interface prof
+- Lors de la génération d'un pdf, le nom du fichier comporte le type de vue utilisé et les heures et les minutes ont été supprimées.
+- Avant de générer un pdf, la page de choix des dates indique maintenant si les conflits et les réservations risquent d'être masqués si les cases "masquer les problèmes" et "masquer les RDV" sont cochées.
+- Lors de l'export pdf du planning mensuel d'une seule ressource, l'intitulé des séances et des réservations apparait.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.4.7
+
+Interface prof
+- Le menu du haut lors d'un export pdf avec le login générique ne fonctionnait pas correctement. C'est corrigé.
+- Tous les CSS de la mise en page se trouvent maintenant dans le répertoire "css" au lieu d'être inclus dans chaque fichier php.
+- La largeur des listes de choix est maintenant fixe. Elle peut être modifiée dans le fichier "css/index.css"
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.4.6
+
+Interface prof
+- Maintenant, quand plusieurs séances sont superposées, dès qu'on passe la souris sur les séances une info-bulle apparait avec la liste de toutes les séances superposées.
+- Lors d'un export PDF, le nom de la vue que l'on souhaite exporter apparait sur la page où on choisit les dates de début et de fin de l'export.
+- Lors d'un export PDF, le nom du fichier est fonction des ressources sélectionnées.
+- Avec le login perso, si l'utilisateur n'avait pas défini une autre heure que l'heure de début et de fin par défaut, la génération des pdf plantait.
+
+Interface étudiant
+- Lors d'un export PDF, le nom du fichier correspond au nom de l'étudiant.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.4.5
+
+Interface prof
+- Dans le bilan par formation, il est maintenant possible de définir la répartition cours, td et tp de chaque type d'enseignement de VT. Cela se fait dans le fichier config.php. La même chose sera faite bientôt dans le bilan "mes heures".
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.4.4
+
+Interface prof
+- Ajout de la possibilité de choisir l'année scolaire dans "Mes modules" quand on a plusieurs bases de données.
+- Ajout de la possibilité de choisir l'année scolaire dans "Mes heures" quand on a plusieurs bases de données.
+- Quand on clique sur une séance, l'interface choisit maintenant la bonne base de données et non plus uniquement la dernière. 
+
+Interface étudiant
+- Ajout de la possibilité de choisir l'année scolaire dans "Mes modules" quand on a plusieurs bases de données.
+- Quand on clique sur une séance, l'interface choisit maintenant la bonne base de données et non plus uniquement la dernière. 
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.4.3
+
+Interface prof
+- Le passage d'une année à l'autre avec les flèches permettant de se déplacer de mois en mois ne fonctionnait pas. C'est corriger.
+- Ajout de la possibilité de colorier les séances avec la couleur associée aux profs dans VT. Le choix se fait dans le fichier config.php.
+
+Interface étudiant
+- Le passage d'une année à l'autre avec les flèches permettant de se déplacer de mois en mois ne fonctionnait pas. C'est corriger.
+- Ajout de la possibilité de colorier les séances avec la couleur associée aux profs dans VT. Le choix se fait dans le fichier config.php.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.4.2
+
+Interface prof
+- Possibilité d'afficher soit le nom soit l'alias des enseignements.
+
+Interface étudiant
+- Possibilité d'afficher soit le nom soit l'alias des enseignements.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.4.1
+
+Ajout d'un champ "salle" en int(2) avec une valeur par défaut de 0 pour autoriser ou non l'utilisation du bilan de l'occupation des salles.
+
+Interface prof
+- Ajout du bilan d'occupation des salles
+- Possibilité d'afficher soit le nom soit l'alias des salles.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.4.0
+
+Ajout d'un champ "giseh" en int(2) avec une valeur par défaut de 0 pour que la version de l'interface web disponible sur le site de VT soit la même que celle utilisée dans mon université. Ce champ sert à activer un bilan des heures pour les exporter vers le logiciel Giseh. Si vous n'avez pas ce logiciel, il faut laisser ce champ à 0 pour tous vos utilisateurs.
+
+Interface prof
+- Ajout d'un paramètre dans config.php afin de définir le fuseau horaire. Cela permet de mettre la bonne heure dans le champ "dateModif" lors de la création d'une réservation au lieu de l'heure GMT+0.
+- Ajout d'un paramètre dans config.php afin de choisir si la couleur des séances correspond à la couleur des groupes dans vt ou à la couleur des matières.
+- Dans "Bilan par formation", j'ai ajouté en fin de tableau la somme totale des heures faites.
+- Dans "Bilan par formation", j'ai séparé les heures des titulaires des heures des vacataires.
+- Ajout de flèches supplémentaires pour se déplacer de mois en mois
+
+Interface étudiant
+- Ajout de flèches supplémentaires pour se déplacer de mois en mois
+
+
+
+AMELIORATIONS DE LA VERSION 4.3.9
+
+Interface prof
+- Le flux RSS a été revu. Maintenant, les changements de prof, de salle et de groupe sont pris en compte.
+
+Interface étudiant
+- Le flux RSS a été revu. Maintenant, les changements de prof, de salle et de groupe sont pris en compte.
+- La création du cookie pour rester connecté est réparée.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.3.8
+
+Interface prof
+- Amélioration de la mise en page et ajout d'un menu.
+- Dans la vue horizontale, quand une séance ou une réservation ont une durée inférieure à 1h, le bandeau du haut et les arrondis sont réduits pour laisser plus de place au texte.
+- Dans la vue verticale mono-ressource, le bandeau du haut et les arrondis de chaque séance et réservation sont légèrement plus petits pour gagner un peu de place.
+- La légende en bas de page a été revue.
+- Dans "mes heures", ajout de la possibilité de faire un tri par code apogée.
+
+Interface étudiant
+- Amélioration de la mise en page et ajout d'un menu.
+- Quand une séance ou une réservation ont une durée inférieure à 1h, le bandeau du haut et les arrondis sont réduits pour laisser plus de place au texte.
+- La légende en bas de page a été revue.
+- Ajout de "Mes modules" pour les étudiants.
+
+Interface smartphone
+- le rayon des arrondis a été légèrement réduit pour gagner un peu de place.
+- les horaires de début et de fin de chaque séance ou réservation sont mieux centrés
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.3.7
+
+Interface prof
+- Affichage des jours fériés qui sont définis au niveau de la filière.
+- Dans la vue "jour J", les vacances des anciennes bases de données sont maintenant affichées.
+- Dans "Mes modules", quand il y a plusieurs ressources associées à une séance, elles sont maintenant classées dans l'ordre alphabétique.
+- Quand on utilisait le login générique et qu'on souhaitait visualiser une semaine contenant un rendez-vous marqué comme "privé" et que le serveur est configuré pour afficher les erreurs, le planning ne s'affichait pas. C'est corrigé.
+- Si dans une séance il y a plusieurs profs, plusieurs salles ou plusieurs groupes, ils sont maintenant classés dans l'ordre alphabétique.
+- Dans "Mes heures", il y a une nouvelle colonne "Effectué" afin de savoir quelles sont les séances qui sont déjà passées.
+
+Interface étudiant
+- Affichage des jours fériés qui sont définis au niveau de la filière.
+- Dans "Mes modules", quand il y a plusieurs ressources associées à une séance, elles sont maintenant classées dans l'ordre alphabétique.
+- Si dans une séance il y a plusieurs profs ou plusieurs salles, ils sont maintenant classés dans l'ordre alphabétique.
+
+Interface smartphone
+- Affichage des jours fériés qui sont définis au niveau de la filière.
+- Les cases des séances et des réservations ont maintenant les coins arrondis comme dans l'interface classique.
+- Dans la vue des profs, l'intitulé des séances n'était pas en gras.
+- Quand une salle était associée à une réservation, la salle n'apparaissait pas. C'est corrigé.
+- Quand on utilisait le login générique et qu'on souhaitait visualiser une semaine contenant un rendez-vous marqué comme "privé" et que le serveur est configuré pour afficher les erreurs, le planning ne s'affichait pas. C'est corrigé.
+
+
+
+AMELIORATIONS DE LA VERSION 4.3.6
+
+Interface prof
+- Dans "Ma config", on peut maintenant choisir les heures de début et de fin de chacun des 4 boutons de raccourci pour les horaires des réservations. IL NE FAUT PAS OUBLIER D'AJOUTER 8 CHAMPS (bouton1Debut, bouton1Fin...) DANS LA TABLE LOGIN_PROF (Cf. lisezmoi.txt) !!!
+- Dans "Mes modules", ajout d'un tiret pour séparer le nom des profs quand il y a plusieurs profs associés à une séance.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.3.5
+
+Interface prof
+- Lors que la croix permettant de modifier ou de supprimer une réservation se trouvait superposée à une séance, elle n'était pas cliquable. C'est corrigé.
+- Le pré-tri des groupes se fait avec les "niveaux" qui sont associés aux groupes dans "groupes/ajouter modifier détruire" dans VT.
+- Quand on laisse la souris quelques secondes sur une séance, l'intitulé complet de la séance apparait dans une info-bulle.
+
+Interface étudiant
+- Quand on clique sur une séance, on obtient le détail de l'ensemble des séances de l'enseignement.
+- Quand on laisse la souris quelques secondes sur une séance, l'intitulé complet de la séance apparait dans une info-bulle.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.3.4
+
+Interface prof
+- La liste des profs était visible quand on tapait l'url des fonctions "mes modules" et "mes heures" en étant déconnecté. Maintenant, il y a une page blanche.
+- Quand une salle est associée à une réservation pour un groupe ou un prof, le nom de la salle est maintenant affiché.
+- Le texte des réservations est mieux centré verticalement.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.3.3
+
+Amélioration des générateurs de logins et de mots de passe pour les étudiants et les profs. Maintenant, les espaces, les tirets et les apostrophes sont supprimées lors de la génération.
+
+Interface prof
+- Quand un rendez-vous perso et une séance avaient la même heure de début, la croix permettant de modifier ou de supprimer le rendez-vous perso n'était pas cliquable. C'est corrigé.
+- Dans "Bilan par formation", la date de la génération n'était pas la bonne pour la deuxième année scolaire et les suivantes.
+- Dans les différents bilans, les forfaits de plus de 100h étaient mal comptabilisés.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.3.2
+
+Interface prof
+- Dans "Mes modules", suppression du trait rouge de séparation entre les séances passées et les séances futures et ajout d'une nouvelle colonne "Effectuée" pour savoir si une séance a déjà été faite ou non.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.3.1
+
+Interface prof
+- La balise <map> n'était pas toujours fermée. C'est corrigé.
+- Avec le login et le mot de passe perso, on peut maintenant cliquer sur n'importe quelle séance afin d'afficher le détail du module auquel appartient celle-ci. L'administrateur peut activer ou non cette fonction pour chaque utilisateur. IL NE FAUT PAS  
+OUBLIER D'AJOUTER 1 CHAMP DANS LA TABLE LOGIN_PROF (Cf. lisezmoi.txt) !!!
+- Dans "mes modules" quand on faisait un classement par prof, par groupe, par type ou par salle, le prof sélectionné dans la liste déroulante changeait pour devenir l'utilisateur au lieu de rester sur le prof sélectionné au départ. C'est corrigé.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.3
+
+Interface prof
+- Dans "Bilan par formation", quand il n'y avait que des enseignements au forfait durant une année scolaire, le tableau s'affichait mal. C'est corrigé.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.2.9
+
+- Correction des erreurs de syntaxe HTML afin de passer le test w3c sur toutes les pages sauf celles de l'interface Smartphone (prévu pour bientôt).
+
+Interface étudiant
+- Limitation à 2 chiffres du numéro de la semaine et à 4 chiffres pour l'année dans les champs "semaine" et "année".
+
+Interface prof
+- Dans "Mes heures", il y avait un bug d'affichage quand on sélectionnait un prof qui n’a aucune séance.
+- La mise en page du menu de "Mes modules" a été corrigée pour être identique aux autres.
+- Dans "Mes modules", il y avait une variable mal initialisée.
+- Dans "Mes modules", lors du classement chronologique, la séparation entre les séances passées et les séances futures se fait par un trait ROUGE. Pour les autres types de classement, la séparation entre les ressources se fait avec un trait BLEU.
+- Limitation à 2 chiffres du numéro de la semaine et à 4 chiffres pour l'année dans les champs "semaine" et "année".
+- Dans "Ma config", il manquait des sauts de lignes pour avoir la même mise en page que les autres fonctions (Mes heures, Mes modules...).
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.2.8
+
+- Correction d'une variable utilisée pour les cookies mal initialisée.
+
+Interface étudiant
+- Transformation du lien du flux RSS en un bouton à côté de l'export PDF pour gagner un peu de place.
+
+Interface prof
+- Ajout d'un bouton pour le flux RSS car dans Firefox 4 le flux RSS n'est plus accessible dans la barre d'adresse.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.2.7
+
+Interface prof
+- Ajout de la possibilité de faire un export PDF avec le login et le mot de passe générique des profs. On peut activer ou désactiver cette possibilité dans le fichier config.php.
+- Ajout de la possibilité d'ajouter un titre lors de la génération des fichiers pdf.
+- Avec le login et le mot de passe persos, prise en compte de l'affichage du samedi et du dimanche ainsi que de l'heure personnalisée dans les exports PDF.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.2.6
+
+-Ajout de la possibilité de sauvegarder un cookie pour rester connecté. Dès qu'on appuie sur "Se déconnecter", le cookie est supprimé.
+
+Interface prof
+- Ajout d'un export PDF de l'emploi du temps. L'administrateur peut activer ou non cette fonction pour chaque utilisateur. IL NE FAUT PAS OUBLIER D'AJOUTER 1 CHAMP DANS LA TABLE LOGIN_PROF (Cf. lisezmoi.txt) !!!
+
+Interface étudiant
+- Ajout d'un export PDF de l'emploi du temps.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.2.5
+
+Interface prof
+- Bouton "Mes Modules" : ajout de la possibilité de faire des tris en fonction des groupes, des salles, des profs, des types et de la date. Pour cela, il faut cliquer sur l'intitulé des colonnes du tableau.
+- Vue "Jour J" : ajout de la possibilité de changer de jour.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.2.4
+
+Interface prof
+- L'administrateur peut activer ou non le bilan des heures par formation. IL NE FAUT PAS OUBLIER D'AJOUTER 1 CHAMP DANS LA TABLE LOGIN_PROF (Cf. lisezmoi.txt) !!!
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.2.3
+
+Interface prof
+- L'administrateur peut maintenant activer ou non pour certains utilisateurs un bilan des heures où on peut choisir le prof dont on veut faire le bilan. IL NE FAUT PAS OUBLIER D'AJOUTER 1 CHAMP DANS LA TABLE LOGIN_PROF (Cf. lisezmoi.txt) !!!
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.2.2
+
+Interface prof
+- L'administrateur peut maintenant activer ou non la possibilité de mettre des réservations, l'affichage des boutons "Mes modules", "Mes heures" et "Ma config" et le flux RSS. IL NE FAUT PAS OUBLIER D'AJOUTER 3 CHAMPS DANS LA TABLE LOGIN_PROF (Cf. lisezmoi.txt) !!!
+- Dans la vue mensuelle, les vacances de la dernière semaine du mois étaient affichées l'avant dernière semaine. C'est corrigé.
+- Dans la vue mensuelle, les vacances du dernier dimanche du mois n'étaient pas affichées. C'est corrigé.
+- Quand on a plusieurs bases de données, les vacances des bases des années précédentes s'affichent dorénavant.
+- Avec le login et le mot de passe perso, quand on se déloguait, le flux RSS était toujours disponible.
+
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.2.1
+
+Interface prof
+- Dans certains cas, l'affichage des conflits des groupes faisait planter l'interface. C'est maintenant corrigé.
+
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.2
+
+Interface prof
+- Dans la vue mensuelle, la pause de midi est maintenant visible.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.1.9
+
+Interface prof
+- Maintenant, quand on visualise le planning d'un groupe, les séances et les réservations placées aux groupes de niveaux inférieurs sont visibles.
+- Ajout du bouton "Mon planning" qui permet de revenir à l'affichage de son propre emploi du temps lorsque d'autres groupes, salles ou profs ont été sélectionnés. Marche uniquement avec le login et le mot de passe perso.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.1.8
+
+Interface prof
+- La croix à côté de l'horaire des rendez-vous persos permettant de les modifier ou de les supprimer apparaissait sur les réservations enregistrées dans les bases de données des années scolaires précédentes. Celle-ci a été effacée car on ne peut modifier ou supprimer que les réservations de la base de données de l'année scolaire en cours.
+
+Interface étudiant
+-Prise en compte de la diffusabilité des séances. Si une séance est marquée comme "non diffusable" dans VT, elle ne s'affichera pas sur le planning des étudiants. Inversement, si elle est marquée comme "diffusable", elle s'affichera sur le planning des étudiants. L'activation ou non de cette fonction se fait dans le fichier config.php
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.1.7
+
+Page de login
+- Maintenant, les logins génériques et persos des profs sont insensibles aux majuscules. En effet, les iPhones ajoutent par défaut des majuscules à la première lettre du login et cela faisait planter l'interface. Par contre, le mot de passe est toujours sensible aux majuscules.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.1.6
+
+Interface prof
+- Quand on utilise son login et son mot de passe perso pour la première fois, l'heure de début et de fin du planning n'étaient pas les bonnes. Pour corriger le problème, il faut changer les valeurs par défaut dans la table login_prof au niveau des champs heureDebut et heureFin afin de mettre la valeur 0 au lieu de 8 et 19.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.1.5
+
+- Ajout de la possibilité de changer le titre de la fenêtre depuis le fichier config.php
+
+Interface prof
+- La liste de pré-tri des salles ne s'affichait pas dans l'ordre alphabétique. C'est maintenant corrigé.
+- Quand on cliquait sur la croix pour modifier une réservation, la date et l'heure de la réservation n'étaient pas les bonnes.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.1.4
+
+- Si l'heure de début de journée n'était pas un nombre entier, l'interface n'affichait pas les séances de début de journée.
+- Certaines requêtes étaient mal interprétées avec les vielles versions de MySQL. Elles ont été améliorées.
+
+Interface prof
+- Si l'heure de début de journée n'était pas un nombre entier, il y avait un problème d'affichage dans le choix des heures de début et de fin des réservations.
+- Si l'heure de début de journée n'était pas un nombre entier, il y avait un problème d'affichage dans le choix des heures de début et de fin de journée dans "Ma config".
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.1.3
+
+Interface prof
+- Dans "Mes heures", les durées forfaitaires de 0h généraient une erreur qui a été corrigée.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.1.2
+
+Interface prof
+- Avec JavaScript désactivé, il était possible de placer une réservation avec une date dans un mauvais format (exemple : 35/13/2010) et cela faisait planter VT. Maintenant, l'interface détecte si JavaScript est activé et si ce n'est pas le cas, on ne peut plus placer de réservations.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.1.1
+
+Interface prof
+- Ajout de la possibilité d'activer ou de désactiver le message "pas de salle" quand aucune salle n'est affectée à une séance depuis le fichier config.php.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.1
+
+Interface prof
+- Ajout du bouton "Ma config" qui permet de modifier l'heure de début et de fin des journées ainsi que de choisir si on veut afficher le samedi et le dimanche. Ne fonctionne que si on utilise son login perso.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.0.2
+
+Interface prof
+- Lorsque des séances étaient annulées, l'affichage du planning plantait. C'est corrigé. 
+- Lorsqu'une séance est annulée, un message est maintenant affiché sur la séance.
+- Les séances non comptabilisées et les séances annulées ne sont plus prises en compte dans "Mes heures".
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.0.1
+
+Interface étudiant
+- Ajout de la possibilité de configurer dans config.php l'ajout ou non du mot "Salle :" devant le nom des salles inscrits sur les séances.
+- Ajout de la possibilité de configurer dans config.php le nombre de caractères à afficher pour les salles dont le nom est inscrit sur les séances.
+
+
+Interface prof
+- Ajout de la possibilité de configurer dans config.php l'ajout ou non du mot "Salle :" devant le nom des salles inscrits sur les séances.
+- Ajout de la possibilité de configurer dans config.php le nombre de caractères à afficher pour les salles dont le nom est inscrit sur les séances.
+
+
+
+
+AMELIORATIONS DE LA VERSION 4.0
+
+- Adaptation des scripts à la nouvelle version de VT.
+- La page de login a été améliorée.
+- Suppression de toutes les erreurs de syntaxe en php.
+- Suppression des erreurs de syntaxe en html afin d'être conforme à la norme W3C.
+- Les heures de début et de fin de journée sont réglables directement depuis le fichier config.php
+- Les heures de début et de fin de la pause de midi sont réglables directement depuis le fichier config.php
+
+
+Interface prof
+- Dans l'affichage du planning des salles, quand il y avait plusieurs profs associés à une séance, le texte n'était pas centré verticalement dans la case de la séance.
+- Dans la vue mensuelle, les info-bulles pour les réservations des groupes de niveaux supérieurs ne fonctionnait pas. Par exemple, une réservation au niveau d'un groupe de TD n'apparaissait pas quand on visualisait le groupe de TP. C'est corrigé.
+- Correction d'une faille de sécurité dans la suppression des rendez-vous.
+- Dans "Mes modules...", on peut maintenant choisir n'importe quel prof.
+- Avec Internet explorer, quand le filtre des groupes était sur "Tous", le filtre des profs se retrouvait aussi sur "Tous" en plus du filtre choisi.
+- Ajout de "Mes heures..." afin que les profs puissent voir le bilan de leurs heures. La colonne "Code apogée" correspond au champ "identifiant" des enseignements dans VT.
+- Dans "Mes heures.." ajout d'un bouton de tri qui classe les séances par ordre chronologique ou par matière.
+- Dans "Mes heures..." ajout d'un export vers excel des bilans des heures.
+- Il n'y a plus besoin d'appuyer sur "envoyer" quand on change de type de vue ou qu'on cache les rendez-vous ou les problèmes. Ca marche pour tous les navigateurs sauf internet explorer qui ne respecte pas les standards du web.
+- Dans "Mes modules", l'interface ne faisait pas la différence entre un enseignement qui s'appelait par exemple "GMP1_AUTOM" et un autre qui s'appelait "GMP1_AUTOMATISATION" et les séances des deux enseignements se trouvaient mélangées quand on visualisait le module "GMP1_AUTOM". C'est corrigé.
+
+
+
+
+AMELIORATIONS DE LA VERSION 3.1.3
+
+Interface prof & étudiant
+- Dans le flux RSS, l'heure des modifications était donnée en GMT+0. Elle est maintenant donnée en GMT+1.
+
+
+
+
+AMELIORATIONS DE LA VERSION 3.1.2
+
+Interface prof
+- Dans "Mes modules", un trait de séparation horizontal rouge sépare maintenant les séances passées des futures séances.
+- Les réservations des groupes de niveaux supérieurs n'apparaissaient pas. Par exemple, une réservation au niveau d'un groupe de TD n'apparaissait pas quand on visualisait le groupe de TP. C'est corrigé.
+
+
+
+
+AMELIORATIONS DE LA VERSION 3.1.1
+
+Interface prof
+- Amélioration de l'algorithme de détection des conflits de profs, groupes, salles... Durée de génération du planning divisée par 4.
+
+
+
+
+AMELIORATIONS DE LA VERSION 3.1
+
+Interface prof
+- Dans l'emploi du temps d'un prof, on peut maintenant voir facilement s'il y a bien une salle affectée à la séance, si le prof n'a pas plusieurs cours en même temps, si les groupes n'ont pas plusieurs cours en même temps et si la salle n'est pas utilisée par quelqu'un d'autre.
+Ces messages peuvent être cachés si on coche la case "Masquer les problèmes".
+- Quand la case "Masquer les RDV" était cochée et qu'ensuite on cliquait sur "Retour à la semaine actuelle", la case "Masquer les RDV" ne restait pas cochée. C'est corrigé.
+
+
+
+
+AMELIORATIONS DE LA VERSION 3.0.3
+
+Interface prof
+- Dans le flux RSS, les noms des groupes et des salles n'apparaissaient plus. Ca a été corrigé.
+
+
+
+
+AMELIORATIONS DE LA VERSION 3.0.2
+
+Interface prof & étudiant
+- Les fichiers .ics ont été légèrement modifiés afin de les rendre plus lisibles.
+
+
+
+
+AMELIORATIONS DE LA VERSION 3.0.1
+
+Interface prof
+- Un bug avec internet explorer a été corrigé. Quand on cliquait sur "Tout désélectionner" on se retrouvait délogué si après on cliquait sur "Envoyer".
+
+
+
+
+AMELIORATIONS DE LA VERSION 3.0
+
+- Toutes les requêtes vers la base de données sont maintenant des requêtes préparées --> suppression des risques d'injections SQL.
+- Correction de certains problèmes d'affichage avec internet explorer
+
+Interface prof
+- Dans la vue "Jour J" un problème lors de l'affichage des vacances a été corrigé
+
+
+
+
+AMELIORATIONS DE LA VERSION 2.8
+
+Interface prof
+- Une vue "Jour J" a été ajoutée. Elle permet de ne visualiser que le jour actuel.
+- La taille de l'image générée dans les différentes vues a été corrigée pour être agrandie dans certains cas et diminuée dans d'autres pour supprimer les ascenseurs verticaux. Ca marche pour tous les navigateurs sauf internet explorer qui ne respecte pas les standards du web. 
+- Dans "mes modules", le nom du jour (lundi, mardi...) des séances a été ajouté.
+
+Interface prof et étudiant
+- L'abonnement au flux RSS ne marchait pas bien dans certains cas. C'est corrigé.
+
+
+
+
+AMELIORATIONS DE LA VERSION 2.7
+
+Interface prof
+- Un nouveau bouton a été ajouté. Il permet de voir tous les détails des modules dans lesquels on intervient. Pour le faire apparaitre, il faut absolument utiliser le login et le mot de passe perso.
+
+
+
+
+AMELIORATIONS DE LA VERSION 2.6
+
+-Ajout d'un mode d'emploi
+
+Interface étudiant :
+- Changement du design des séances
+
+Interface prof :
+- Changement du design des séances
+- L'abonnement à l'agenda électronique est de nouveau disponible. Pour s'abonner, il faut cliquer sur le nom de la ressource dans la zone grise.
+- Ajout d'une liste de pré-tri des groupes d'étudiants.
+- Ajout d'une liste de pré-tri des profs.
+- Ajout d'une liste de pré-tri des salles.
+
+
+
+AMELIORATIONS DE LA VERSION 2.5
+
+Interfaces profs, salles et multi-ressources :
+- Les interfaces profs et salles sont remplacées par l'interface multi-ressources qui s'appelle maintenant "planning des profs".
+
+Interface téléphones portables.
+- Une interface optimisée pour les téléphones portables a été ajoutée. Pour passer à la semaine suivante, il faut cliquer sur le tiers droit de l'image. Pour aller à la semaine précédente, il faut cliquer sur le tiers gauche de l'image.
+
+
+
+AMELIORATIONS DE LA VERSION 2.4
+
+Interface multi-ressources :
+- Une vue mensuelle a été ajoutée. Pour voir le détail des séances, il faut laisser la souris quelques secondes au-dessus de celles-ci.
+
+
+
+
+AMELIORATIONS DE LA VERSION 2.3
+
+Les emplois du temps de 2008-2009 et de 2009-2010 sont visibles sur la même interface web.
+
+
+
+
+AMELIORATIONS DE LA VERSION 2.2
+
+Interface étudiant :
+- Les vacances scolaires et les périodes d'apprentissage apparaissent dans l'emploi du temps.
+
+Interface prof :
+- Les vacances scolaires des profs apparaissent dans l'emploi du temps.
+
+Interface multi-ressources :
+- Les vacances scolaires des profs apparaissent dans l'emploi du temps.
+- Les vacances scolaires et les périodes d'apprentissage des groupes apparaissent dans l'emploi du temps.
+
+
+
+AMELIORATIONS DE LA VERSION 2.1
+
+Interface étudiant :
+- J'ai corrigé l'affichage des commentaires de séances qui dépassaient 2 lignes.
+- Le flux RSS est maintenant détecté par votre navigateur.
+
+Interface prof :
+- Les fichiers ics sont faits à partir des bases 08-09 et 09-10.
+- J'ai ajouté le bouton "journée" dans l'ajout des rendez-vous perso.
+- J'ai corrigé l'affichage des commentaires de séances qui dépassaient 2 lignes.
+- Le flux RSS est maintenant détecté par votre navigateur.
+
+Interface salle :
+- J'ai corrigé l'affichage des commentaires de séances qui dépassaient 2 lignes.
+- J'ai corrigé l'affichage des noms des réservations qui dépassaient 2 lignes.
+- On peut maintenant masquer réservations pour voir le cours qu'il y a en dessous en cas de superposition.
+
+Interface multi-ressources :
+- j'ai réduit la largeur (ou la hauteur pour la vue verticale) du rectangle des rendez-vous perso pour pouvoir voir s'il y a un cours en dessous.
+- On peut maintenant masquer les rendez-vous perso pour voir le cours qu'il y a en dessous en cas de superposition.
+- J'ai ajouté le bouton "journée" dans l'ajout des rendez-vous perso.
+- J'ai corrigé l'affichage des noms des rdv perso qui dépassaient 2 lignes.
+- J'ai corrigé l'affichage des commentaires de séances qui dépassaient 2 lignes.
+- Affichage de son propre emploi du temps lorsqu'on vient juste de se loguer avec son login perso en multi ressources.
+- Le flux RSS est maintenant détecté par votre navigateur.
+

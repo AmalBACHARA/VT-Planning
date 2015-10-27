@@ -1,0 +1,56 @@
+#userDroits label {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+#userDroits {
+	width: 100%;
+}
+
+/** LEGENDE */ 
+.cercleLegende {
+    border-radius:50%;
+    width:20px;
+    height:20px;
+    border:2px solid white;
+}
+
+#active {
+    background: rgb(64,122,173);
+}
+#nonactive {
+    background: rgb(82,149,207);
+}
+#disabled {
+    background: rgb(141,186,223);
+}
+
+
+#droitLegende .col-md-2 .cercleLegende {
+    position: absolute;
+}
+#droitLegende .col-md-2 span {
+    position: relative;
+    text-align: left;
+    width: 90px;
+}
+
+#droitLegende .col-md-2 {
+    padding-top: 5px;
+}
+.textLegende {
+    margin-left: 30px;
+    text-align: left;
+}
+#textLegende {
+    text-align: left;
+    padding-bottom: 10px;
+    padding-left: 15px;
+}
+
+#collapseTitleLegende {
+    text-decoration: none;
+}
+#headingOne:hover {
+    cursor: pointer;
+}
