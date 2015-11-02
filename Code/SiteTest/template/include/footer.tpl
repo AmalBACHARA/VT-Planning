@@ -1,6 +1,6 @@
 <footer>
 	<div id="footerText">
-		D&eacute;velopp&eacute; par <span style="font-weight:bold;">Bruno MILLION</span> (IUT GMP) et par <span style="font-weight:bold;">Ga&euml;tan COLOMBIER</span> (IUT GMP) pour le PST de Ville d'Avray (Université Paris Ouest) - <span class="badge">{$compteur} pages vues </span>
+		D&eacute;velopp&eacute; par <span style="font-weight:bold;">Amal BACHARA</span>, par <span style="font-weight:bold;">Sokhna Diarra DIOP</span> et par <span style="font-weight:bold;">Adrien MARDIL</span> (Master MIAGE) Université Paris Saclay - <span class="badge">{$compteur} pages vues </span>
 		<span class="btn badge" onClick="loadVersion()" role="button">Version 6.0.0</span> 
 		<span class="btn badge" onClick="loadQuiSommesNous()" role="button">Qui sommes nous </span>			
 		Site responsive <img src="img/responsive.png" id="logoResponsive" alt="logoResponsive">
