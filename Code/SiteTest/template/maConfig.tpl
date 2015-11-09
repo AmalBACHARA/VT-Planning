@@ -6,6 +6,10 @@
 		<link rel="icon" type="image/png" href="img/glyphicons_calendar_title.png"/>
 		<link rel="stylesheet" href="API/bootstrap/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="css/common.css"/>
+		<link href='css/noty_theme_default.css' rel='stylesheet'>
+		<link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
+   		<link rel="stylesheet" href="API/bootstrap/css/bootstrap-theme.min.css">
+		
 		<script type="text/javascript" src="API/jquery/jquery.js"></script>
 		<script type="text/javascript" src="API/bootstrap/js/bootstrap.js"></script>
 		<script type="text/javascript" src="js/loadPage.js"></script>
