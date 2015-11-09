@@ -5,6 +5,8 @@
 		<title>VT Agenda - Gestion des droits</title>
 		<link rel="icon" type="image/png" href="img/glyphicons_calendar_title.png"/>
 		<link rel="stylesheet" href="API/bootstrap/css/bootstrap.min.css"/>
+		<link href='css/noty_theme_default.css' rel='stylesheet'>
+		<link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/common.css"/>
 		<link rel="stylesheet" href="css/admin.css"/>
 		<script src="API/jquery/jquery.js"></script>
