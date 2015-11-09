@@ -4,6 +4,9 @@
 		<meta charset="utf-8">
 		<title>VT Calendar - Mes heures</title>
 		<link rel="stylesheet" href="API/bootstrap/css/bootstrap.min.css"/>
+		<link href='css/noty_theme_default.css' rel='stylesheet'>
+		<link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
+   		<link rel="stylesheet" href="API/bootstrap/css/bootstrap-theme.min.css">
 		<link href="API/footable/css/footable.core.css?v=2-0-1" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="js/loadPage.js"></script>
 		<script type="text/javascript" src="API/jquery/jquery.js"></script>
