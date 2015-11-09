@@ -21,6 +21,8 @@
 
         <!-- Page styles -->
         <link rel="stylesheet" href="API/bootstrap/css/bootstrap.min.css"/>
+        <link href='css/noty_theme_default.css' rel='stylesheet'>
+        <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/common.css"/>
         <link rel="stylesheet" href="css/login.css"/>
         <link rel="stylesheet" href="css/agendas_ics.css">
