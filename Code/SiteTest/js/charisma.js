@@ -235,7 +235,6 @@ function docReady() {
                 $.noop).apply(document);
         }
     });
-
     //tour
     if ($('.tour').length && typeof(tour) == 'undefined') {
         var tour = new Tour();
@@ -296,6 +295,7 @@ function docReady() {
     });
 
 
+// utiliser une requete ajax a ce niveau afin d'affiher le bon calendrier
     $('#calendar').fullCalendar({
         header: {
             left: 'prev,next today',
