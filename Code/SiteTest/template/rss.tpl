@@ -13,6 +13,7 @@
 		<script type="text/javascript" src="API/bootstrap/js/bootstrap.min.js"></script>
 	</head>
 	<body>
+		{include file='template/index_others.tpl'}
 		{include file='template/include/header.tpl'}
 		
 		<div class="container">

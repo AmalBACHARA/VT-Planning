@@ -12,6 +12,7 @@
 		<script type="text/javascript" src="js/config.js"></script>
 	</head>
 	<body>
+		{include file='template/index_others.tpl'}
 		{include file='template/include/header.tpl'}
 		<div class="container">
 			<div class="col-md-4 col-centered">
