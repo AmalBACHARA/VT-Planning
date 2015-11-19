@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-10-27 11:07:48
+<?php /* Smarty version Smarty-3.1.18, created on 2015-11-18 21:41:59
          compiled from "template\login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:23735562cdacc79f9b4-38825574%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0da2a0e028d1bc00a816b89c727782b518d6e062' => 
     array (
       0 => 'template\\login.tpl',
-      1 => 1445940467,
+      1 => 1447879057,
       2 => 'file',
     ),
   ),
@@ -28,6 +28,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<link rel="stylesheet" href="API/bootstrap/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="css/common.css"/>
 		<link rel="stylesheet" href="css/login.css"/>
+		<link href='css/noty_theme_default.css' rel='stylesheet'>
+		<link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
+   		<link rel="stylesheet" href="API/bootstrap/css/bootstrap-theme.min.css">
+		
 		<script src="API/jquery/jquery.js"></script>
 		<script src="API/bootstrap/js/bootstrap.js"></script>
 		<script type="text/javascript" src="js/loadPage.js"></script>
