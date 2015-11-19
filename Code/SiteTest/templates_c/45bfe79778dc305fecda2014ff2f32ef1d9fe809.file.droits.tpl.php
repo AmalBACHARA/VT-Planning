@@ -1,4 +1,29 @@
-<html>
+<?php /* Smarty version Smarty-3.1.18, created on 2015-11-18 21:40:26
+         compiled from "template\droits.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:12334564ce20f064a48-09067437%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '45bfe79778dc305fecda2014ff2f32ef1d9fe809' => 
+    array (
+      0 => 'template\\droits.tpl',
+      1 => 1447879223,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '12334564ce20f064a48-09067437',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_564ce20f20e724_45675971',
+  'variables' => 
+  array (
+    'droits' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_564ce20f20e724_45675971')) {function content_564ce20f20e724_45675971($_smarty_tpl) {?><html>
 	<head>
 		<meta name="viewport" content="width = device-width, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no">
 		<meta charset="utf-8">
@@ -12,8 +37,10 @@
 		<script type="text/javascript" src="js/loadPage.js"></script>
 	</head>
 	<body>
-		{include file='template/index_others.tpl'}
-		{include file='template/include/header.tpl'}
+		<?php echo $_smarty_tpl->getSubTemplate ('template/index_others.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+		<?php echo $_smarty_tpl->getSubTemplate ('template/include/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 		<div class="container">
 		<div class="table-responsive" id="vueDroits">
 			<table class="table-striped center-table">
@@ -24,116 +51,117 @@
 			    <tr>
 				   <td id="thdroittable">Administrateur</td>
 				   <td>
-						{if $droits.admin == 1}
+						<?php if ($_smarty_tpl->tpl_vars['droits']->value['admin']==1) {?>
 							<span class="glyphicon glyphicon-ok-circle"></span>
-						{else}
+						<?php } else { ?>
 							<span class="glyphicon glyphicon-ban-circle"></span>
-						{/if}
+						<?php }?>
 					</td>
 			    </tr>
 			    <tr>
 				   <td id="thdroittable">Dialogue de gestion</td>
 				   <td>
-						{if $droits.dialogue == 1}
+						<?php if ($_smarty_tpl->tpl_vars['droits']->value['dialogue']==1) {?>
 							<span class="glyphicon glyphicon-ok-circle"></span>
-						{else}
+						<?php } else { ?>
 							<span class="glyphicon glyphicon-ban-circle"></span>
-						{/if}
+						<?php }?>
 					</td>
 			    </tr>
 				<tr>
 				   <td id="thdroittable">Export PDF</td>
 				   <td>
-						{if $droits.pdf == 1}
+						<?php if ($_smarty_tpl->tpl_vars['droits']->value['pdf']==1) {?>
 							<span class="glyphicon glyphicon-ok-circle"></span>
-						{else}
+						<?php } else { ?>
 							<span class="glyphicon glyphicon-ban-circle"></span>
-						{/if}
+						<?php }?>
 					</td>
 			    </tr>
 				<tr>
 				   <td id="thdroittable">Faire le bilan de l'occupation des salles</td>
 				   <td>
-						{if $droits.salle == 1}
+						<?php if ($_smarty_tpl->tpl_vars['droits']->value['salle']==1) {?>
 							<span class="glyphicon glyphicon-ok-circle"></span>
-						{else}
+						<?php } else { ?>
 							<span class="glyphicon glyphicon-ban-circle"></span>
-						{/if}
+						<?php }?>
 					</td>
 			    </tr>
 				<tr>
 				   <td id="thdroittable">Faire le bilan de ses heures</td>
 				   <td>
-						{if $droits.bilan_heure == 1}
+						<?php if ($_smarty_tpl->tpl_vars['droits']->value['bilan_heure']==1) {?>
 							<span class="glyphicon glyphicon-ok-circle"></span>
-						{else}
+						<?php } else { ?>
 							<span class="glyphicon glyphicon-ban-circle"></span>
-						{/if}
+						<?php }?>
 					</td>
 			    </tr>
 				<tr>
 				   <td id="thdroittable">Faire le bilan des heures de tout le monde</td>
 				   <td>
-						{if $droits.bilan_heure_global == 1}
+						<?php if ($_smarty_tpl->tpl_vars['droits']->value['bilan_heure_global']==1) {?>
 							<span class="glyphicon glyphicon-ok-circle"></span>
-						{else}
+						<?php } else { ?>
 							<span class="glyphicon glyphicon-ban-circle"></span>
-						{/if}
+						<?php }?>
 					</td>
 			    </tr>
 				<tr>
 				   <td id="thdroittable">Faire le bilan des heures des formations</td>
 				   <td>
-						{if $droits.bilan_formation == 1}
+						<?php if ($_smarty_tpl->tpl_vars['droits']->value['bilan_formation']==1) {?>
 							<span class="glyphicon glyphicon-ok-circle"></span>
-						{else}
+						<?php } else { ?>
 							<span class="glyphicon glyphicon-ban-circle"></span>
-						{/if}
+						<?php }?>
 					</td>
 			    </tr>
 				<tr>
 				   <td id="thdroittable">Flux RSS</td>
 				   <td>
-						{if $droits.rss == 1}
+						<?php if ($_smarty_tpl->tpl_vars['droits']->value['rss']==1) {?>
 							<span class="glyphicon glyphicon-ok-circle"></span>
-						{else}
+						<?php } else { ?>
 							<span class="glyphicon glyphicon-ban-circle"></span>
-						{/if}
+						<?php }?>
 					</td>
 			    </tr>
 				<tr>
 				   <td id="thdroittable">Modifier sa configuration</td>
 				   <td>
-						{if $droits.configuration == 1}
+						<?php if ($_smarty_tpl->tpl_vars['droits']->value['configuration']==1) {?>
 							<span class="glyphicon glyphicon-ok-circle"></span>
-						{else}
+						<?php } else { ?>
 							<span class="glyphicon glyphicon-ban-circle"></span>
-						{/if}
+						<?php }?>
 					</td>
 			    </tr>
 				<tr>
 				   <td id="thdroittable">Se placer des réservations</td>
 				   <td>
-						{if $droits.reservation == 1}
+						<?php if ($_smarty_tpl->tpl_vars['droits']->value['reservation']==1) {?>
 							<span class="glyphicon glyphicon-ok-circle"></span>
-						{else}
+						<?php } else { ?>
 							<span class="glyphicon glyphicon-ban-circle"></span>
-						{/if}
+						<?php }?>
 					</td>
 			    </tr>
 				<tr>
 				   <td id="thdroittable">Séances clicables</td>
 				   <td>
-						{if $droits.seance_clicable == 1}
+						<?php if ($_smarty_tpl->tpl_vars['droits']->value['seance_clicable']==1) {?>
 							<span class="glyphicon glyphicon-ok-circle"></span>
-						{else}
+						<?php } else { ?>
 							<span class="glyphicon glyphicon-ban-circle"></span>
-						{/if}
+						<?php }?>
 					</td>
 			    </tr>
 			</table>
 		</div>
 		</div>
-		{include file='template/include/footer.tpl'}
+		<?php echo $_smarty_tpl->getSubTemplate ('template/include/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 	</body>
-</html>
+</html><?php }} ?>

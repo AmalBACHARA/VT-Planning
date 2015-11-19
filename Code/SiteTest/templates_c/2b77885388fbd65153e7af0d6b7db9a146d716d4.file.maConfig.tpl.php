@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-10-27 19:17:42
+<?php /* Smarty version Smarty-3.1.18, created on 2015-11-18 21:42:29
          compiled from "template\maConfig.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:3983562fbfc61b6f73-06680063%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2b77885388fbd65153e7af0d6b7db9a146d716d4' => 
     array (
       0 => 'template\\maConfig.tpl',
-      1 => 1424040540,
+      1 => 1447879308,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_562fbfc630ad45_35239190',
   'variables' => 
   array (
     'userConfs' => 0,
@@ -22,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'heureFin' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_562fbfc630ad45_35239190',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_562fbfc630ad45_35239190')) {function content_562fbfc630ad45_35239190($_smarty_tpl) {?><html>
 	<head>
@@ -39,6 +39,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<script type="text/javascript" src="js/config.js"></script>
 	</head>
 	<body>
+		<?php echo $_smarty_tpl->getSubTemplate ('template/index_others.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 		<?php echo $_smarty_tpl->getSubTemplate ('template/include/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 		<div class="container">

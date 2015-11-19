@@ -1,4 +1,29 @@
-<html>
+<?php /* Smarty version Smarty-3.1.18, created on 2015-11-18 21:42:31
+         compiled from "template\agendas_ics.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:5091564ce2b7a90bb0-10506426%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '06478f0ec06c262c7881b417e1a0d0af921c4dc6' => 
+    array (
+      0 => 'template\\agendas_ics.tpl',
+      1 => 1447879324,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '5091564ce2b7a90bb0-10506426',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'loginStudy' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_564ce2b7b02058_34952126',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_564ce2b7b02058_34952126')) {function content_564ce2b7b02058_34952126($_smarty_tpl) {?><html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,13 +61,15 @@
 
     </head>
     <body>
-		{include file='template/index_others.tpl'}
-        {include file='template/include/header.tpl'}
+		<?php echo $_smarty_tpl->getSubTemplate ('template/index_others.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+        <?php echo $_smarty_tpl->getSubTemplate ('template/include/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
         <div class="container">
-        {if isset($loginStudy)}
+        <?php if (isset($_smarty_tpl->tpl_vars['loginStudy']->value)) {?>
             <!-- PARTIE ETUDIANT -->
             <!-- faire une redirection vers index.php -->
-        {else}
+        <?php } else { ?>
             <!-- PARTIE ENSEIGNANT -->
             <!-- div - btn-group -->
             <div class="btn-group btn-group-justified">
@@ -81,11 +108,13 @@
             </form>
             <!-- ./form - form-enseignant -->
 
-        {/if}
+        <?php }?>
 </div>
         <script src="js/agendas_ics.js"></script>
 
-        {include file='template/include/footer.tpl'}
+        <?php echo $_smarty_tpl->getSubTemplate ('template/include/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 
     </body>
 </html>
+<?php }} ?>
