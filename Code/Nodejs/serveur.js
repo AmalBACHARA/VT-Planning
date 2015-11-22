@@ -18,7 +18,7 @@ var router = express.Router();
 var nib = require('nib');
 var Sequelize = require('sequelize');
 
-sequelize = new Sequelize('vtmiage', 'root', 'root', {
+sequelize = new Sequelize('vtmiage', 'root', '', {
       dialect: "mysql", // or 'sqlite', 'postgres', 'mariadb'
       port:    3306, // or 5432 (for postgres)
     });
@@ -92,10 +92,35 @@ var Filiere = sequelize.define('Filiere', {
  })
 
 
+
+//var matiere1 = Matiere.build({ nom: 'Math', description: 'analyse numerique pour la fac' });
+
+
+//filiere1.setMatiere('matiere1');
+
+//myFiliere.setMatiere(myMatiere);
+
+
+/*var myMatiere = Matiere.find({where :{nom: 'Math'}}).then(
+    function(matiere) { console.log("matiere trouvee") },
+    function(err) { console.log(err)}
+);
+*/
+//matiere1.save();    
+
+//var filiere1 = Filiere.build({ nom: 'M2 Miage APP'});
+//filiere1.save();
+
+/*
+var myFiliere = Filiere.find({where :{nom: 'M2 Miage APP'}}).then(
+    function(filiere) { console.log("filiere trouvee") },
+    function(err) { console.log(err)}
+);
+*/
 sequelize.sync();
 Filiere.hasMany(Matiere);
 Matiere.belongsTo(Filiere);
-
+//myMatiere.setFiliere(myFiliere);
 var mats = Matiere.all();
 var fils = Filiere.all();
 
@@ -178,7 +203,7 @@ res.redirect('/');
 //});
 
 
-
+/*
 app.get('/user/:email', function (req, res){
 var uEmail = req.params.email;
   User.find({mail: uEmail},function(err, result) {
@@ -186,10 +211,10 @@ var uEmail = req.params.email;
   });
 console.log("Email: " + req.params.email);
 });
+*/
 
 
-
-
+/*
 //BY username ??
 app.get('/diagramme/byUser', function (req, res){
 var uuserName = req.session.user;//req.params.userName;
@@ -197,8 +222,9 @@ var uuserName = req.session.user;//req.params.userName;
     return res.json(result);
   });
 console.log("userName: " + req.params.userName);
-});
+});*/
 
+/*
 //by diagram  name not used
 app.get('/diagramme/byName/:diagrammeName', function(req, res){
 var udiagrammeName = req.params.diagrammeName;
@@ -207,9 +233,9 @@ var udiagrammeName = req.params.diagrammeName;
   });
 console.log("diagrammeName: " + req.params.diagrammeName);
 
-})
+})*/
 
-
+/*
 app.get('/user/:email/:diagramme', function (req, res){
 var uDiagramme = req.params.diagramme;
 var uEmail = req.params.email;
@@ -222,9 +248,9 @@ var uEmail = req.params.email;
     return res.json(result);
   });
 console.log("User diagram : " + req.params.diagramme);
-});
+});*/
 
-
+/*
 app.get('/user/:email/:diagrammeID', function (req, res){
 var diagrammeID = req.body.diagrammeID;
   User.findOne({'diagrammeID':diagrammeID},function(err, result) {
@@ -232,8 +258,8 @@ var diagrammeID = req.body.diagrammeID;
   });
   console.log(req.body.diagrammeID); 
 });
-
-
+*/
+/*
 app.get('/diagramme/:id', function (req, res){
   return Diagramme.findOne(req.params.id, function (err, diagramme) {
     if (!err) {
@@ -281,7 +307,7 @@ app.post('/newDiagramme', function (req, res){
   return res.send( diagramme);
 });
  
-app.post('/newDiagramme', function ( req, res, next ){
+/*app.post('/newDiagramme', function ( req, res, next ){
   new Diagramme({
       cells : req.body
       
@@ -292,14 +318,14 @@ app.post('/newDiagramme', function ( req, res, next ){
   res.end("yes");
   });
 });
-
+*//*
 app.get('/diagramme/:id', function (req, res){
 console.log("calllllllleed");
 Diagramme.findById({_id: id}, function (err, dia) { 
 
 res.json(dia);
 });
-
+*/
 
 
 /* PUT /todos/:id */
@@ -376,8 +402,6 @@ app.post('/login', function (req, res){
  
 });
 
-*/
-
 // return js to send current username to client
 app.get('/user.js', function (req, res) {
   if (req.session.user) res.send('var userName = "' + req.session.user.mail + '"');
@@ -397,7 +421,7 @@ app.get('/user', function (req, res){
       return console.log(err);
     }
   });
-});
+});*/
 
 // Routes
 /*
