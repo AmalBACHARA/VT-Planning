@@ -13,7 +13,7 @@ Nous allons changer les technologies utilisées si besoin pour le rendre réutil
 
   
 ## Objectifs fixés  
- - Reprendre l’interface actuel et l’améliorer car il est déjà responsive avec le projet de l’année dernière 
+ - Reprendre l’interface actuelle et l’améliorer car elle est déjà responsive avec le projet de l’année dernière 
  - Reprendre toutes les fonctionnalités du projet de l’année dernière  
  - Bien documenter le projet pour aider les prochains étudiants à l’utilisation future 
  - Faire une API où seront répertoriées toutes les requêtes afin de modifier à l’avenir que ce fichier JavaScript au moment du changement de la base de données 
@@ -23,7 +23,7 @@ Nous allons changer les technologies utilisées si besoin pour le rendre réutil
  - Amélioration de l'interface - Checked !
  - Installation de NodeJs - Checked !
  - Récupération de l'API du groupe R4  - Checked !
- - Complément de l'API du groupe R4  
+ - Complément de l'API du groupe R4 - En cours
  - Implémentation de l'API  
  - Gestion des flux
  - Wiki - En cours

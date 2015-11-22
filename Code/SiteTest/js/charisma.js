@@ -296,6 +296,14 @@ function docReady() {
     });
 
 
+<<<<<<< HEAD
+// utiliser une requete ajax a ce niveau afin d'affiher le bon calendrier
+    $('#calendar').fullCalendar( function(){
+    $.getJSON("fichier.json", function(result){
+        $.each(result, function(i, field){
+            $("div").append(field + " ");
+        });
+=======
     $('#calendar').fullCalendar({
         header: {
             left: 'prev,next today',
@@ -342,7 +350,9 @@ function docReady() {
                 start: '2014-06-28'
             }
         ]
+>>>>>>> d9a07b6db62401617014c44a092a7da94f61bb87
     });
+});
 
 }
 
