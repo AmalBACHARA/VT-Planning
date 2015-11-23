@@ -1,28 +1,12 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.18, created on 2015-11-18 21:42:14
-         compiled from "template\modules.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:8311564ce2a6a4e735-75648330%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
 <?php /* Smarty version Smarty-3.1.18, created on 2015-11-18 21:40:04
          compiled from "template\modules.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2552564cdb617218a1-61037693%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> d9a07b6db62401617014c44a092a7da94f61bb87
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8d4035cb2de7ee792355dfcb583c5e84997cb9a3' => 
     array (
       0 => 'template\\modules.tpl',
-<<<<<<< HEAD
-      1 => 1447879057,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '8311564ce2a6a4e735-75648330',
-  'function' => 
-  array (
-  ),
-=======
       1 => 1447879200,
       2 => 'file',
     ),
@@ -33,7 +17,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.18',
   'unifunc' => 'content_564cdb61a4a2e5_59787607',
->>>>>>> d9a07b6db62401617014c44a092a7da94f61bb87
   'variables' => 
   array (
     'loginStudy' => 0,
@@ -47,35 +30,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'code' => 0,
   ),
   'has_nocache_code' => false,
-<<<<<<< HEAD
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_564ce2a6ba8aa5_92755791',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_564ce2a6ba8aa5_92755791')) {function content_564ce2a6ba8aa5_92755791($_smarty_tpl) {?><html>
-=======
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_564cdb61a4a2e5_59787607')) {function content_564cdb61a4a2e5_59787607($_smarty_tpl) {?><html>
->>>>>>> d9a07b6db62401617014c44a092a7da94f61bb87
 	<head>
 		<meta name="viewport" content="width = device-width, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no">
 		<meta charset="utf-8">
 		<title>VT Agenda - Mes modules</title>
 		<link rel="icon" type="image/png" href="img/glyphicons_calendar_title.png"/>
-<<<<<<< HEAD
-		<link rel="stylesheet" href="API/bootstrap/css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="css/common.css"/>
-		<link href="API/footable/css/footable.core.css?v=2-0-1" rel="stylesheet" type="text/css">
-		<link href='css/noty_theme_default.css' rel='stylesheet'>
-		<link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
-   		<link rel="stylesheet" href="API/bootstrap/css/bootstrap-theme.min.css">
-   		
-=======
 
 
 		<link rel="stylesheet" href="API/bootstrap/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="css/common.css"/>
 		<link href="API/footable/css/footable.core.css?v=2-0-1" rel="stylesheet" type="text/css">
->>>>>>> d9a07b6db62401617014c44a092a7da94f61bb87
 		<script type="text/javascript" src="js/loadPage.js"></script>
 		<script src="API/jquery/jquery.js"></script>
 		<script type="text/javascript" src="API/footable/js/footable.js"></script>
@@ -86,12 +52,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<script type="text/javascript" src="API/tableExport/jquery.base64.js"></script>
 	</head>
 	<body>
-<<<<<<< HEAD
-		
-=======
 		<?php echo $_smarty_tpl->getSubTemplate ('template/index_others.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
->>>>>>> d9a07b6db62401617014c44a092a7da94f61bb87
 		<?php echo $_smarty_tpl->getSubTemplate ('template/include/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 		<div class="container">
