@@ -23,7 +23,12 @@ Nous allons changer les technologies utilisées si besoin pour le rendre réutil
  - Amélioration de l'interface - Checked !
  - Installation de NodeJs - Checked !
  - Récupération de l'API du groupe R4  - Checked !
- - Complément de l'API du groupe R4 - En cours
+ - Complément de l'API du groupe R4 - En cours 
  - Implémentation de l'API  
- - Gestion des flux
+ - Gestion des flux RSS - En cours
  - Wiki - En cours
+ - Entretien avec le prof et le groupe R4
+ - Annulation de l'utilisation de l'API et NodeJs (cf. Issue #1)
+ - Complément de l'API du groupe R4 annulé
+ - Vérification des requêtes de l'ancienne base
+ - 
