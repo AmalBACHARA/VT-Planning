@@ -4,6 +4,8 @@ div id="panelFilter">
 -->
 
     <!-- The styles -->
+    <!-- jQuery -->
+    <script src="bower_components/jquery/jquery.min.js"></script>
     <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
 
     <link href="css/charisma-app.css" rel="stylesheet">
@@ -19,8 +21,7 @@ div id="panelFilter">
     <link href='css/uploadify.css' rel='stylesheet'>
     <link href='css/animate.min.css' rel='stylesheet'>
 
-    <!-- jQuery -->
-    <script src="bower_components/jquery/jquery.min.js"></script>
+    
 	
 	
 	<div class="col-lg-2 col-sm-2">

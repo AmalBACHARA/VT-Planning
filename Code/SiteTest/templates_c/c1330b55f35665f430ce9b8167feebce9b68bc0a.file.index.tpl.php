@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-10-27 19:30:55
+<?php /* Smarty version Smarty-3.1.18, created on 2015-11-24 21:23:55
          compiled from "template\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:22793562f4d355151a5-04900617%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c1330b55f35665f430ce9b8167feebce9b68bc0a' => 
     array (
       0 => 'template\\index.tpl',
-      1 => 1445970650,
+      1 => 1448396630,
       2 => 'file',
     ),
   ),
@@ -31,6 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<link rel="stylesheet" href="API/bootstrap-calendar-master/css/calendar.css">
 		<link rel="stylesheet" href="css/common.css"/>
 
+		<script src="bower_components/jquery/jquery.min.js"></script>
 		<script type="text/javascript" src="js/loadPage.js"></script>
 		<script type="text/javascript" src="API/bootstrap-calendar-master/components/underscore/underscore-min.js"></script>
 		<script type="text/javascript" src="API/bootstrap/js/bootstrap.min.js"></script>

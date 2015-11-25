@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-10-27 19:33:50
+<?php /* Smarty version Smarty-3.1.18, created on 2015-11-24 21:21:18
          compiled from "template\include\calendar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:14140562f4d35a8b9e0-94049022%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6304817a5733636ad006c7a91f1bffdec9371cbb' => 
     array (
       0 => 'template\\include\\calendar.tpl',
-      1 => 1445970706,
+      1 => 1448396472,
       2 => 'file',
     ),
   ),
@@ -41,6 +41,8 @@ div id="panelFilter">
 -->
 
     <!-- The styles -->
+    <!-- jQuery -->
+    <script src="bower_components/jquery/jquery.min.js"></script>
     <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
 
     <link href="css/charisma-app.css" rel="stylesheet">
@@ -56,8 +58,7 @@ div id="panelFilter">
     <link href='css/uploadify.css' rel='stylesheet'>
     <link href='css/animate.min.css' rel='stylesheet'>
 
-    <!-- jQuery -->
-    <script src="bower_components/jquery/jquery.min.js"></script>
+    
 	
 	
 	<div class="col-lg-2 col-sm-2">

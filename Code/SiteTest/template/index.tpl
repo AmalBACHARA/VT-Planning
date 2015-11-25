@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="API/bootstrap-calendar-master/css/calendar.css">
 		<link rel="stylesheet" href="css/common.css"/>
 
+		<script src="bower_components/jquery/jquery.min.js"></script>
 		<script type="text/javascript" src="js/loadPage.js"></script>
 		<script type="text/javascript" src="API/bootstrap-calendar-master/components/underscore/underscore-min.js"></script>
 		<script type="text/javascript" src="API/bootstrap/js/bootstrap.min.js"></script>
