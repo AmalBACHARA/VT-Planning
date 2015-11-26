@@ -24,7 +24,7 @@
 		<div class="container">
 		{if isset($loginStudy)}
 			<!-- PARTIE ETUDIANT -->
-			<div class="col-md-4 col-centered">
+			<div class="col-md-8 col-centered">
 				<div class="panel panel-default">
 					<div class="panel-heading"> 
 						<strong class="">Afficher mes modules</strong>
@@ -56,7 +56,7 @@
 				</div>
 			</div>
 		{else}
-			<div class="col-md-4 col-centered">
+			<div class="col-md-8 col-centered">
 				<div class="panel panel-default">
 					<div class="panel-heading"> 
 						<strong class="">Afficher mes modules</strong>
@@ -114,7 +114,7 @@
 		
 		<table class="table-striped table center-table footable" id="tableModule">
 			<thead>
-				<tr>
+				<tr style="background:#BDBDBD">
 					<th>Date</th>
 					<th>Groupes</th>
 					<th data-hide="phone,tablet" data-sort-ignore="true">Type</th>

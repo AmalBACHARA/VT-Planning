@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-11-18 21:40:04
+<?php /* Smarty version Smarty-3.1.18, created on 2015-11-26 22:12:37
          compiled from "template\modules.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2552564cdb617218a1-61037693%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8d4035cb2de7ee792355dfcb583c5e84997cb9a3' => 
     array (
       0 => 'template\\modules.tpl',
-      1 => 1447879200,
+      1 => 1448572354,
       2 => 'file',
     ),
   ),
@@ -59,7 +59,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="container">
 		<?php if (isset($_smarty_tpl->tpl_vars['loginStudy']->value)) {?>
 			<!-- PARTIE ETUDIANT -->
-			<div class="col-md-4 col-centered">
+			<div class="col-md-8 col-centered">
 				<div class="panel panel-default">
 					<div class="panel-heading"> 
 						<strong class="">Afficher mes modules</strong>
@@ -101,7 +101,7 @@ $_smarty_tpl->tpl_vars['enseignement']->_loop = true;
 				</div>
 			</div>
 		<?php } else { ?>
-			<div class="col-md-4 col-centered">
+			<div class="col-md-8 col-centered">
 				<div class="panel panel-default">
 					<div class="panel-heading"> 
 						<strong class="">Afficher mes modules</strong>
@@ -177,7 +177,7 @@ $_smarty_tpl->tpl_vars['prof']->_loop = true;
 		
 		<table class="table-striped table center-table footable" id="tableModule">
 			<thead>
-				<tr>
+				<tr style="background:#BDBDBD">
 					<th>Date</th>
 					<th>Groupes</th>
 					<th data-hide="phone,tablet" data-sort-ignore="true">Type</th>
