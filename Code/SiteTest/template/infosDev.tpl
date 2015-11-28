@@ -43,29 +43,38 @@
 					</ul>
 				</div>
 			</div>
-			
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Luis BRAGA & Pierrick MOREAU & Edmond S'NADANE</h3>
+				</div>
+				<div class="panel-body">
+					<ul>
+						<li>Refonte de l'application et Design (version 6.0.0)</li>
+					</ul>
+				</div>
+			</div>
+
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h3 class="panel-title">Didier COURTAUD</h3>
 				</div>
 				<div class="panel-body">
 					<ul>
-						<li>Encadrement du projet VT2</li>
+						<li>Encadrement du projet VT</li>
 					</ul>
 				</div>
 			</div>
 			
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">Luis BRAGA - Apprenti M2 MIAGE</h3>
+					<h3 class="panel-title">Amal BACHARA - Apprentie M2 MIAGE</h3>
 				</div>
 				<div class="panel-body">
 					<ul>
-						<li>Réalisation du calendrier avec la librairie bootstrap-calendar</li>
-						<li>Insertion des données dans le calendrier</li>
-						<li>Système de filtrage</li>
-						<li>Optimisation CSS des pages</li>
-						<li>Page index</li>
+						<li></li>
+						<li></li>
+						<li></li>
 						<li></li>
 					</ul>
 				</div>
@@ -73,28 +82,28 @@
 			
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">Pierrick MOREAU  - Apprenti M2 MIAGE</h3>
+					<h3 class="panel-title">Sokhna Diarra DIOP - Apprentie M2 MIAGE</h3>
 				</div>
 				<div class="panel-body">
 					<ul>
-						<li>Architecture du projet</li>
-						<li>Réalisation des templates de pages</li>
-						<li>Page Modules, QuiSommesNous, Login, DialogueGestion, Droits, Admin, Config, mesDS, OccupationSalle</li>
-						<li>Entretien du Github</li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
 					</ul>
 				</div>
 			</div>
 			
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">Edmond S'NADANE  - Apprenti M2 MIAGE</h3>
+					<h3 class="panel-title">Adrien MARDIL - Apprenti M2 MIAGE</h3>
 				</div>
 				<div class="panel-body">
 					<ul>
-						<li>Réalisation de la page de consultation des heures</li>
-						<li>Développement de la page versions de VTAgenda</li>
-						<li>Developpement de la page d'export PDF</li>
-						<li>Script d'export EXCEL</li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
 					</ul>
 				</div>
 			</div>

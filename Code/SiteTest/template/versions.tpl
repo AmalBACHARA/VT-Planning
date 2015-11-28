@@ -24,6 +24,28 @@
 			</div>
 			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 				<div class="panel panel-default">
+					<div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="true" aria-controls="collapse7" role="tab" id="heading7">
+						<h4 class="panel-title">
+							<a>
+								Version 6.0.1
+							</a>
+						</h4>
+					</div>
+					<div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
+						<div class="panel-body">
+							<ul>
+								<lh><em><strong>Interface prof :</strong></em></lh>
+								<li>Amélioration des interfaces</li>
+								<li>Intégration des nouvelles requêtes SQL suite au changement de la structure de la base </li>
+							</ul>
+							<ul>
+								<lh><em><strong>Inferface étudiant :</strong></em></lh>
+								<li>Intégration des nouvelles requêtes SQL suite au changement de la structure de la Base </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
 					<div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1" role="tab" id="heading1">
 						<h4 class="panel-title">
 							<a>
