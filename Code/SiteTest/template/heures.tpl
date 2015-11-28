@@ -23,36 +23,41 @@
 		{include file='template/index_others.tpl'}
 		{include file='template/include/header.tpl'}
 		<div class="container">
-			<div class="col-md-4 col-centered">
+			<div class="col-md-8 col-centered">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<strong class="">Afficher mes Heures</strong>
 					</div>
 					<div class="panel-body">
 						<form class="form-horizontal" role="form" name="form" id="form" method="get" >
-
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Année scolaire </label>
 							<input type="hidden" name="page" value="heure" />
-							<label>Année scolaire :</label>
+							<div class="col-sm-9">
 							<select class="form-control" name="annee_scolaire">
 								{foreach from=$annees item=annee}
 									<option>{$annee}</option>
 								{/foreach}
-							</select><br>
+							</select></div></div>
 
-							<label>Tri par Département :</label>
+							<div class="form-group">
+							<label class="col-sm-3 control-label">Tri par Département </label>
+							<div class="col-sm-9">
 							<select class="form-control" name="composante" onchange="document.form.submit();">
 								<option value="all">TOUS</option>
 								{foreach from=$composantes item=composante}
 									<option {if $composante.codeComposante == $code}selected="selected"{/if} value="{$composante.codeComposante}">{$composante.nom}</option>
 								{/foreach}
-							</select><br>
+							</select></div></div>
 
-							<label>Choix du professeur :</label>
+							<div class="form-group">
+							<label class="col-sm-3 control-label">Choix du professeur </label>
+							<div class="col-sm-9">
 							<select name="prof" class="form-control" id="prof" required="">
 								{foreach from=$allCSTeachers item=csTeacher}
 									<option {if $csTeacher.codeProf == $codeProf}selected="selected"{/if}  value="{$csTeacher.codeProf}">{$csTeacher.nom}   {$csTeacher.prenom}</option>
 								{/foreach}
-							</select><br>
+							</select></div></div>
 						</form>
 					</div>
 					<div class="panel-footer">
@@ -64,7 +69,7 @@
 
 			<table class="table-striped table center-table footable" id="tableSeance" >
 				<thead>
-					<tr>
+					<tr style="background:#BDBDBD">
 						<th data-sort-ignore="true">Formation</th>
 						<th data-hide="phone,tablet">Code apogée</th>
 						<th>Matière</th>
