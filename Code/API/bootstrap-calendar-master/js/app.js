@@ -1,7 +1,5 @@
 function updateCalendar() {
-
 	"use strict";
-	
 	var codeSalle = $('#salleFilter :selected').val();
 	var codeProf = $('#profsFilter :selected').val();
 	var codeGroupe = $('#groupesFormationsFilter :selected').val();
@@ -12,7 +10,7 @@ function updateCalendar() {
 		view: 'month',
 		tmpl_path: 'tmpls/',
 		tmpl_cache: false,
-		day: 'now',//'2013-03-12',
+		day: 'now',
 		onAfterEventsLoad: function(events) {
 			if(!events) {
 				return;
@@ -42,6 +40,7 @@ function updateCalendar() {
 			}
 		}
 	};
+	console.log("app.js");
 
 	var calendar = $('#calendar').calendar(options);
 	

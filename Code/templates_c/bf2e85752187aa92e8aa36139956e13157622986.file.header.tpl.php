@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-11-28 21:47:55
+<?php /* Smarty version Smarty-3.1.18, created on 2015-11-29 12:16:40
          compiled from "template\include\header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:27364565a12fbdb78b1-16201694%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:13557565ade98416ea7-27839950%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'bf2e85752187aa92e8aa36139956e13157622986' => 
     array (
       0 => 'template\\include\\header.tpl',
-      1 => 1448574739,
+      1 => 1448743984,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '27364565a12fbdb78b1-16201694',
+  'nocache_hash' => '13557565ade98416ea7-27839950',
   'function' => 
   array (
   ),
@@ -24,9 +24,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_565a12fc12dcf5_89764264',
+  'unifunc' => 'content_565ade9859e1c3_86067115',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_565a12fc12dcf5_89764264')) {function content_565a12fc12dcf5_89764264($_smarty_tpl) {?><nav class="navbar navbar-default" id="headerProjet" role="navigation">
+<?php if ($_valid && !is_callable('content_565ade9859e1c3_86067115')) {function content_565ade9859e1c3_86067115($_smarty_tpl) {?><nav class="navbar navbar-default" id="headerProjet" role="navigation">
   <div class="container-fluid">
     <?php if (isset($_smarty_tpl->tpl_vars['teachLogin']->value)) {?>
       <a class="navbar-brand" id="panelCalendar"><span class="glyphicon glyphicon-list"></span></a>

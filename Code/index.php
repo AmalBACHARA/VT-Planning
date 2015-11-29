@@ -47,8 +47,6 @@ if (isset($_SESSION['studyLogin']) || isset($_SESSION['teachLogin']))
 		include('script/getAllTeacherInfos.php');
 		$smarty->assign("profs", $allTeachers);
 		$smarty->assign("code", $codeProf);
-		include('script/getAllDepartementInfo.php');
-		$smarty->assign("departements", $allDepartements);
 		include('script/getAllSallesInfo.php');
 		$smarty->assign("salles", $allSalles);
 		include('script/getAllMaterielsInfo.php');

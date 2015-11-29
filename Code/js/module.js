@@ -1,6 +1,5 @@
 function loadProfsList()
 {
-    var codeComposante = $('#departements :selected').val();
 
     addProfsToOptions = function(profs)
 	{
@@ -17,10 +16,7 @@ function loadProfsList()
 
     $.ajax({
         type: "POST",
-        url: "./script/getTeacherByComposante.php",
-        data: {
-            code: codeComposante
-        },
+        url: "./script/getAllTeacherInfo.php",
         cache: false,
         dateType: 'text',
         success: function(data)

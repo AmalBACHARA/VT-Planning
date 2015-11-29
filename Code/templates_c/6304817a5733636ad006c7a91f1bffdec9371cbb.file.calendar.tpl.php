@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-11-28 21:47:56
+<?php /* Smarty version Smarty-3.1.18, created on 2015-11-29 12:22:23
          compiled from "template\include\calendar.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:11085565a12fc25af16-54365945%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:18083565adfeff00410-01353997%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '6304817a5733636ad006c7a91f1bffdec9371cbb' => 
     array (
       0 => 'template\\include\\calendar.tpl',
-      1 => 1448574739,
+      1 => 1448748968,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '11085565a12fc25af16-54365945',
+  'nocache_hash' => '18083565adfeff00410-01353997',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_565a12fc364368_60980281',
+  'unifunc' => 'content_565adfeff0b0c3_20030833',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_565a12fc364368_60980281')) {function content_565a12fc364368_60980281($_smarty_tpl) {?><!--
+<?php if ($_valid && !is_callable('content_565adfeff0b0c3_20030833')) {function content_565adfeff0b0c3_20030833($_smarty_tpl) {?><!--
 div id="panelFilter">
 </div>
 -->
@@ -140,7 +140,9 @@ div id="panelFilter">
 	</div>
 	<!-- Fon Modal -->
 </div>
-
+<script>
+console.log("calendar.tpl");
+</script>
 <script type="text/javascript" src="API/bootstrap-calendar-master/js/app.js"></script>
 <script type="text/javascript" src="js/CalendarResize.js"></script>
 <script type="text/javascript" src="js/MobileSwipeCalendar.js"></script><?php }} ?>
