@@ -17,7 +17,7 @@
 	$critere .= "0)";
 	$req_groupes2->closeCursor();
 
-	$sql="SELECT *, enseignements.nom as nom_enseignement,seances.dureeSeance as seanceDuree, seances.commentaire as seancesCommentaire FROM seances LEFT JOIN (enseignements) ON (seances.codeEnseignement=enseignements.codeEnseignement) left join seances_groupes on seances_groupes.codeSeance=seances.codeSeance where seances.deleted='0' and seances.codeSeance!=''  AND enseignements.deleted='0' and ". $critere." and enseignements.codeTypeActivite=".$identifiant_DS." and seances_groupes.deleted='0' order by seances.dateSeance,seances.heureSeance ";	
+	$sql="SELECT *, enseignements.nom as nom_enseignement,seances.dureeSeance as seanceDuree, seances.commentaire as seancesCommentaire FROM seances LEFT JOIN (enseignements) ON (seances.codeEnseignement=enseignements.codeEnseignement) left join seances_groupes on seances_groupes.codeSeance=seances.codeSeance where seances.deleted='0' and seances.codeSeance!=''  AND enseignements.deleted='0' and ". $critere." and seances_groupes.deleted='0' order by seances.dateSeance,seances.heureSeance ";	
 	$req4=$dbh->prepare($sql);
 	$req4->execute();
 	while($res_4 = $req4->fetch())

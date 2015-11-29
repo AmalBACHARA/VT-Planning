@@ -10,18 +10,18 @@
 	$critere=" (";
 	foreach($res_groupe as $res_groupes)
 	{
-		$critere .= "seances_groupes.codeRessource='".$res_groupes['codeGroupe']."' OR ";
+		$critere .= "calendriers_groupes.codeRessource='".$res_groupes['codeGroupe']."' OR ";
 	}
 	$critere .= "0)";
 	$req_groupes2->closeCursor();
 
-	$sql="SELECT * FROM seances_groupes WHERE  deleted='0' and ".$critere;	
+	$sql="SELECT * FROM calendriers_groupes WHERE  deleted='0' and ".$critere;	
 	$req_seance_groupe=$dbh->prepare($sql);
 	$req_seance_groupe->execute();
 	$condition1="";
 	while($res_seance_groupe = $req_seance_groupe->fetch())
 	{
-		$condition1=$condition1." codeSeance='".$res_seance_groupe['codeSeance']."' or";
+		$condition1=$condition1." codeSeance='".$res_seance_groupe['code']."' or";
 	}
 	$condition1=$condition1." codeSeance='bidon' and";
 

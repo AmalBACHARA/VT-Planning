@@ -16,7 +16,7 @@
 
 		//requete pour avoir la liste des salles
 
-		$sql="SELECT ressources_salles.codeSalle AS codeSalle,ressources_salles.nom AS salle, zones_salles.nom as nom_zone FROM ressources_salles   LEFT JOIN zones_salles on (zones_salles.codeZoneSalle=ressources_salles.codeZoneSalle) WHERE ressources_salles.deleted=0 and zones_salles.deleted=0  order by zones_salles.nom, ressources_salles.nom asc";
+		$sql="SELECT ressources_salles.codeSalle AS codeSalle,ressources_salles.nom AS salle FROM ressources_salles  WHERE ressources_salles.deleted=0 order by ressources_salles.nom asc";
 
 		$req_liste_salle=$dbh->query($sql);
 		$res_liste_salle=$req_liste_salle->fetchAll();	
@@ -36,17 +36,8 @@
 			foreach ($res_salle as $res_salles)	
 			{
 				$compteur_de_salle+=1;
-				$compteur_de_salle_zone+=1;
 				
-				//ligne bilan de chaque zone
-				if ($memoire_zone != $res_liste_salles['nom_zone'] && $premiere_ligne!=0)
-				{
-					$taux_zone = round(($total_seance_par_zone+$total_reservation_par_zone)/(1120*($compteur_de_salle_zone))*100,2);
-					array_push($rows, array("c" => array(array("v" => $memoire_zone ,"f" => null), array("v" => $taux_zone ,"f" => null))));
-					$total_seance_par_zone=0;
-					$total_reservation_par_zone=0;	
-					$compteur_de_salle_zone=1;
-				}
+				
 				
 				$premiere_ligne=1;	
 	
@@ -62,20 +53,14 @@
 				
 				unset ($req_reservation);
 				
-				$total_seance_par_zone+=round($res_salles['heure'],2);
-				$total_reservation_par_zone+=round($duree_reservation,2);
 				
-				//ligne bilan de la dernière zone
-				if ($compteur_de_salle==$nb_de_salle)
-				{
-					array_push($rows, array("c" => array(array("v" => $memoire_zone ,"f" => null), array("v" => $taux_zone ,"f" => null))));
-				}
+				
 			}
 			unset ($req_salle);
-			$memoire_zone=$res_liste_salles['nom_zone'];
 		}
 		
 		$out = array('cols' => $cols, 'rows' => $rows);
 		
 		echo json_encode($out);
+		
 ?>

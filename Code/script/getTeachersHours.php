@@ -57,8 +57,8 @@ if($codeProf != 0) {
 		SELECT
 			seances.dureeSeance as seancesDureeSeance,
 			GROUP_CONCAT(ressources_groupes.nom SEPARATOR ' / ') as nomFormation, 
-			enseignements.identifiant as codeApogee, 
-			matieres.nom as nomMatiere,
+			enseignements.nom as codeApogee, 
+			matieres.alias as nomMatiere,
 			seances.dateSeance,
 			seances.heureSeance,
 			codeTypeActivite,

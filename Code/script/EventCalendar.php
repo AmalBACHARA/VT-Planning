@@ -11,14 +11,13 @@ include('../config/config.php');
 $start = $_REQUEST['from'] / 1000;
 $end   = $_REQUEST['to'] / 1000;
 $loginUtilisateur = "";
-
 $out = array();
 //si l'utilisateur est un prof
 if(isset($_SESSION['teachLogin']))
 {
 	$sql='SELECT distinct seances.dateSeance, seances.heureSeance, seances.dureeSeance,
                 enseignements.nom, enseignements.couleurFond,enseignements.alias,
-                enseignements.codeTypeSalle, types_activites.codeTypeActivite, types_activites.alias,
+                enseignements.codeTypeSalle,
                 matieres.couleurFond, matieres.nom, login_prof.login, ressources_salles.nom as salle, ressources_groupes.codeGroupe, ressources_salles.codeSalle
                 FROM seances
                 LEFT JOIN seances_profs ON seances.codeSeance = seances_profs.codeSeance
@@ -29,7 +28,6 @@ if(isset($_SESSION['teachLogin']))
                 LEFT JOIN login_prof ON login_prof.codeprof = seances_profs.codeRessource
 				LEFT JOIN ressources_salles ON ressources_salles.codeSalle = seances_salles.codeRessource
 				LEFT JOIN ressources_groupes ON ressources_groupes.codeGroupe = seances_groupes.codeRessource
-                INNER JOIN types_activites on enseignements.codeTypeActivite = types_activites.codeTypeActivite
                 WHERE seances_profs.deleted =  "0"
                 AND seances.deleted =  "0"
                 AND matieres.deleted =  "0"
@@ -51,7 +49,7 @@ else
 {
     $sql=sprintf('SELECT distinct seances.dateSeance, seances.heureSeance, seances.dureeSeance,
                 enseignements.nom, enseignements.couleurFond,enseignements.alias,
-                enseignements.codeTypeSalle, types_activites.codeTypeActivite, types_activites.alias,
+                enseignements.codeTypeSalle,
                 matieres.couleurFond, matieres.nom
                 FROM seances
                 inner join seances_groupes on seances.codeSeance=seances_groupes.codeSeance
@@ -60,7 +58,6 @@ else
                 inner join ressources_etudiants on ressources_groupes_etudiants.codeEtudiant = ressources_etudiants.codeEtudiant
                 inner join enseignements ON seances.codeEnseignement = enseignements.codeEnseignement
                 inner join matieres ON matieres.codeMatiere = enseignements.codeMatiere
-                inner join types_activites on enseignements.codeTypeActivite = types_activites.codeTypeActivite
                 WHERE seances.deleted =  "0"
                 AND matieres.deleted =  "0"
                 AND seances.annulee =  "0"
@@ -93,42 +90,7 @@ while($ligneCode = $req->fetch())
     $timeDebut = strtotime($debut); // on convertie la du date de debut en seconde
     $timeFin = $timeDebut + $heureDuree;
 
-    if($ligneCode['codeTypeActivite'] == 1) //CM
-    {
-        $eventC = 'event-info';
-    }
-    else if($ligneCode['codeTypeActivite'] == 2) //TD
-    {
-        $eventC = 'event-warning';
-    }
-    else if($ligneCode['codeTypeActivite'] == 3) //TP
-    {
-        $eventC = 'event-success';
-    }
-    else if($ligneCode['codeTypeActivite'] == 4) //PRO
-    {
-       $eventC = 'event-simple';
-    }
-    else if($ligneCode['codeTypeActivite'] == 6) //STA
-    {
-        $eventC = 'event-info';
-    }
-    else if($ligneCode['codeTypeActivite'] == 7) //ADM
-    {
-        $eventC = 'event-special';
-    }
-    else if($ligneCode['codeTypeActivite'] == 8) //TUT
-    {
-        $eventC = 'event-inverse';
-    }
-    else if($ligneCode['codeTypeActivite'] == 9) //DS
-    {
-        $eventC = 'event-important';
-    }
-    else if($ligneCode['codeTypeActivite'] == 11) //TP APP
-    {
-        $eventC = 'event-success';
-    }
+    
        
     $out[] = array(
         'id' => $ligneCode['nom']." -TEST ". $ligneCode["salle"]. "et ".$ligneCode["codeGroupe"],
@@ -169,3 +131,6 @@ echo json_encode(array('success' => 1, 'result' => $out));
 exit;
 */
 ?>
+<script>
+console.log("event");
+</script>

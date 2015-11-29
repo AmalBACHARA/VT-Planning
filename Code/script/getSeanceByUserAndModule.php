@@ -12,7 +12,7 @@
 	if (isset($_POST['module']) && !empty($_POST['module']))
 	{
 		$nom_module=$_POST['module'];
-		$sql="SELECT *,  enseignements.nom as nom_enseignement,seances.dureeSeance as seanceDuree, seances.commentaire as seancesCommentaire FROM seances LEFT JOIN (enseignements) ON (seances.codeEnseignement=enseignements.codeEnseignement)   where seances.deleted='0' and seances.codeSeance!=''  AND enseignements.deleted='0' and enseignements.nom like ".$dbh->quote("%".$nom_module."%", PDO::PARAM_STR)." order by seances.dateSeance,seances.heureSeance ";		
+		$sql="SELECT *, matieres.alias as alias, enseignements.nom as nom_enseignement,seances.dureeSeance as seanceDuree, seances.commentaire as seancesCommentaire FROM matieres, seances LEFT JOIN (enseignements) ON (seances.codeEnseignement=enseignements.codeEnseignement)   where seances.deleted='0' and seances.codeSeance!=''  AND enseignements.deleted='0' AND enseignements.codeMatiere = matieres.codeMatiere and enseignements.nom like ".$dbh->quote("%".$nom_module."%", PDO::PARAM_STR)." order by seances.dateSeance,seances.heureSeance ";		
 		$req4=$dbh->prepare($sql);
 		$req4->execute();
 		while($res_4 = $req4->fetch())
@@ -26,6 +26,7 @@
 			$nom_jour = translateDay($nom_jour);
 			
 			unset($req_type);
+			/*
 			$sqlType="SELECT * FROM types_activites WHERE codeTypeActivite=".$res_4['codeTypeActivite'];
 			$req_type=$dbh->prepare($sqlType);	
 			$req_type->execute();
@@ -34,15 +35,12 @@
 				$nom_type_seance = $res_type['alias'];
 			}
 			$req_type->closeCursor();
-			
+			*/
 			// enseignement
-			$type=explode("_",$res_4['nom_enseignement']);
-			$enseignement=$type[1];
-			if ($enseignement == $nom_type_seance)
-			{
-				$enseignement = $type[0];
-			}
-		
+			
+			$enseignement=$res_4['alias'];
+
+			$nom_type_seance = '';
 			$duree = pad_zero(floor($res_4["seanceDuree"] / 100)).'h'.pad_zero(floor($res_4["seanceDuree"] % 100));
 			$heure = pad_zero(floor($res_4["heureSeance"] / 100)).'h'.pad_zero(floor($res_4["heureSeance"] % 100));
 			
@@ -68,7 +66,7 @@
 			$req5->closeCursor();
 			
 			// recherche de la salle associée à la séance
-			$nom_salle="";
+			$nom_salle=" ";
 			$sql="SELECT * from seances_salles left join ressources_salles on (seances_salles.codeRessource=ressources_salles.codeSalle)  WHERE seances_salles.codeSeance=".$code_seance." and seances_salles.deleted='0' and ressources_salles.deleted='0' order by ressources_salles.nom";
 			$req7=$dbh->prepare($sql);	
 			$req7->execute();
@@ -107,7 +105,7 @@
 			$date_actuelle=date('Y').date('m').date('d');
 			$date_seance=$annee.$mois.$jour;
 			
-			array_push($seances, implode('#', array($nom_jour." ".$jour."-".$mois."-".$annee, $nom_groupe, $nom_type_seance, $enseignement, $nom_prof, $nom_salle, $heure, $duree, ($date_actuelle>$date_seance))));
+			array_push($seances, implode('#', array($nom_jour." ".$jour."-".$mois."-".$annee, $nom_groupe,$enseignement, $nom_prof, $nom_salle, $heure, $duree, ($date_actuelle>$date_seance))));
 		}
 		$req4->closeCursor();
 		
