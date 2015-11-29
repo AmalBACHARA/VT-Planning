@@ -44,10 +44,7 @@ while ($salle = mysql_fetch_array($ressources_salles) )
 				//nom de la seance
 				$enseignements=mysql_query("SELECT * FROM enseignements WHERE codeEnseignement='$seance[codeEnseignement]' AND deleted= '0'");
 				$enseignement = mysql_fetch_array($enseignements);	
-				$numero_type=$enseignement['codeTypeActivite'];
-				$types=mysql_query("SELECT * FROM types_activites WHERE codeTypeActivite='$numero_type'");
-				$type_enseignement = mysql_fetch_array($types);
-				$type=$type_enseignement['alias'];
+				$type=$enseignement['alias'];
 								//création de la ligne summary
 				//récupération de différentes infos du champs nom de la table enseignement
 				$cursename=explode("_",$enseignement['nom']);
