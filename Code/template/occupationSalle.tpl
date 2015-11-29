@@ -32,7 +32,6 @@
 				<thead>
 					<tr>
 						<th>Salle</th>
-						<th>Zone</th>
 						<th data-hide="phone,tablet" data-sort-ignore="true">Séance (en heure)</th>
 						<th data-hide="phone,tablet" data-sort-ignore="true">Réservation (en heure)</th>
 						<th data-hide="phone,tablet" data-sort-ignore="true">Total (en heure)</th>

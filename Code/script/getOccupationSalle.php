@@ -10,7 +10,7 @@
 
 		//requete pour avoir la liste des salles
 
-		$sql="SELECT ressources_salles.codeSalle AS codeSalle,ressources_salles.nom AS salle FROM ressources_salles   WHERE ressources_salles.deleted=0 and order by ressources_salles.nom asc";
+		$sql="SELECT ressources_salles.codeSalle AS codeSalle,ressources_salles.nom AS salle FROM ressources_salles   WHERE ressources_salles.deleted=0 order by ressources_salles.nom asc";
 
 		$req_liste_salle=$dbh->query($sql);
 		$res_liste_salle=$req_liste_salle->fetchAll();	
