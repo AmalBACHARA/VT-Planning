@@ -12,7 +12,6 @@ $(document).on('icheck', function() {
     });
 }).trigger('icheck');
 /*
-
  * ./iCheck plugin
  */
 

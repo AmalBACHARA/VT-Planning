@@ -31,6 +31,7 @@ if(	isset($_POST['idprof']) &&
 		$prenomProf	= $_POST['prenom'];
 
 		$requete_precision_prof = "AND codeProf=$idProf AND nom='$nomProf' AND prenom='$prenomProf'";
+		echo $requete_precision_prof;
 } else {
 		// si aucun prof n'est précisé => EXPORT TOUS CALENDRIERS
 		$requete_precision_prof = "";
