@@ -75,14 +75,7 @@
                 <form class="form-horizontal" role="form">
 		    <div class="form-group">
 			<label for="departementFilter" class="col-md-12">Salles</label>
-			    <div class="col-md-12">
-				<select name="departementFilter" class="form-control" id="departementFilter" required="" onChange="loadSallesListFilter()">
-				    <option value="all" selected>TOUS</option>
-                                    {foreach from=$departements item=departement}
-					<option value={$departement.codeZoneSalle}>{$departement.nom_zone}</option>
-				    {/foreach}
-				</select>
-                            </div>
+			    
 			</div>
                 </form>                                     
 	    </div>

@@ -119,7 +119,9 @@ div id="panelFilter">
 	</div>
 	<!-- Fon Modal -->
 </div>
-
+<script>
+console.log("calendar.tpl");
+</script>
 <script type="text/javascript" src="API/bootstrap-calendar-master/js/app.js"></script>
 <script type="text/javascript" src="js/CalendarResize.js"></script>
 <script type="text/javascript" src="js/MobileSwipeCalendar.js"></script>

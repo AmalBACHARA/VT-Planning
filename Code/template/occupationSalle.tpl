@@ -43,7 +43,6 @@
 					{foreach from=$occupations item=occupation}
 						<tr>
 							<td>{$occupation.nom_salle}</td>
-							<td>{$occupation.nom_zone}</td>
 							<td>{$occupation.heure}</td>
 							<td>{$occupation.heureReserve}</td>
 							<td>{$occupation.total}</td>
@@ -54,7 +53,6 @@
 								<td colspan="2">TOTAL</td>
 								<td>{$occupation.total_seance}</td>
 								<td>{$occupation.total_reserve}</td>
-								<td>{$occupation.total_zone}</td>
 								<td>{$occupation.total_taux}</td>
 							<tr>
 						{/if}
@@ -66,7 +64,6 @@
 				<thead>
 					<tr>
 						<th>Salle</th>
-						<th>Zone</th>
 						<th>Séance (en heure)</th>
 						<th>Réservation (en heure)</th>
 						<th>Total (en heure)</th>
@@ -77,7 +74,6 @@
 					{foreach from=$occupations item=occupation}
 						<tr>
 							<td>{$occupation.nom_salle}</td>
-							<td>{$occupation.nom_zone}</td>
 							<td>{$occupation.heure}</td>
 							<td>{$occupation.heureReserve}</td>
 							<td>{$occupation.total}</td>
@@ -88,7 +84,6 @@
 								<td colspan="2">TOTAL</td>
 								<td>{$occupation.total_seance}</td>
 								<td>{$occupation.total_reserve}</td>
-								<td>{$occupation.total_zone}</td>
 								<td>{$occupation.total_taux}</td>
 							<tr>
 						{/if}

@@ -115,7 +115,6 @@
 				<tr>
 					<th>Date</th>
 					<th>Groupes</th>
-					<th data-hide="phone,tablet" data-sort-ignore="true">Type</th>
 					<th data-hide="phone,tablet">Enseignement</th>
 					<th data-hide="phone,tablet" data-sort-ignore="true">Profs</th>
 					<th data-hide="phone,tablet" data-sort-ignore="true">Salles</th>
@@ -133,7 +132,6 @@
 				<tr>
 					<th>Date</th>
 					<th>Groupes</th>
-					<th>Type</th>
 					<th>Enseignement</th>
 					<th>Profs</th>
 					<th>Salles</th>
