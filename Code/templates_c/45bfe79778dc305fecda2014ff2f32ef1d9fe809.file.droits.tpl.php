@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-11-29 12:22:21
+<?php /* Smarty version Smarty-3.1.18, created on 2015-11-29 16:52:36
          compiled from "template\droits.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:25140565adfeda7a941-77120964%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '45bfe79778dc305fecda2014ff2f32ef1d9fe809' => 
     array (
       0 => 'template\\droits.tpl',
-      1 => 1448743984,
+      1 => 1448812355,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_565adfedc3bc49_97017747',
   'variables' => 
   array (
     'droits' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_565adfedc3bc49_97017747',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_565adfedc3bc49_97017747')) {function content_565adfedc3bc49_97017747($_smarty_tpl) {?><html>
 	<head>
@@ -37,15 +37,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<script type="text/javascript" src="js/loadPage.js"></script>
 	</head>
 	<body>
-		
+		<?php echo $_smarty_tpl->getSubTemplate ('template/index_others.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 		<?php echo $_smarty_tpl->getSubTemplate ('template/include/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 		<div class="container">
 		<div class="table-responsive" id="vueDroits">
 			<table class="table-striped center-table">
 				<tr>
-				   <th id="thdroittable">Droits</th>
-				   <th>Activation</th>
+				   <th style="background:#BDBDBD" id="thdroittable">Droits</th>
+				   <th style="background:#BDBDBD">Activation</th>
 				</tr>
 			    <tr>
 				   <td id="thdroittable">Administrateur</td>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-11-29 14:51:41
+<?php /* Smarty version Smarty-3.1.18, created on 2015-11-29 17:14:36
          compiled from "template\dialogueGestion.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19742565b02ed76fe02-91199148%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'beddffc8401e38f28cda7742019fc6a9b9b3b944' => 
     array (
       0 => 'template\\dialogueGestion.tpl',
-      1 => 1448743984,
+      1 => 1448813674,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_565b02ed89ff28_75539509',
   'variables' => 
   array (
     'composantes' => 0,
@@ -22,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'grade' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_565b02ed89ff28_75539509',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_565b02ed89ff28_75539509')) {function content_565b02ed89ff28_75539509($_smarty_tpl) {?><html>
 	<head>
@@ -43,6 +43,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<script type="text/javascript" src="js/filterTable.js"></script>
 	</head>
 	<body>
+	<?php echo $_smarty_tpl->getSubTemplate ('template/index_others.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 		<?php echo $_smarty_tpl->getSubTemplate ('template/include/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 		<div class="container">
@@ -55,7 +57,7 @@ $_smarty_tpl->tpl_vars['composante']->_loop = true;
 </h2>
 			<table class="table center-table col-sm-9 footable">
 				<thead>
-					<tr>
+					<tr style="background:#BDBDBD">
 						<th>Grade</th>
 						<th data-hide="phone,tablet">Nom des enseignants</th>
 						<th data-hide="phone,tablet" data-sort-ignore="true">Horaires statuaires</th>

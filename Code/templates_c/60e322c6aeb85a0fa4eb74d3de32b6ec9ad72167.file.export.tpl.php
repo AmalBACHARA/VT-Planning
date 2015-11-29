@@ -1,4 +1,29 @@
-<html>
+<?php /* Smarty version Smarty-3.1.18, created on 2015-11-29 17:15:48
+         compiled from "template\export.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:15242565b2490abf5b6-30240725%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '60e322c6aeb85a0fa4eb74d3de32b6ec9ad72167' => 
+    array (
+      0 => 'template\\export.tpl',
+      1 => 1448813744,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '15242565b2490abf5b6-30240725',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_565b2490b7ec59_10135466',
+  'variables' => 
+  array (
+    'droits' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_565b2490b7ec59_10135466')) {function content_565b2490b7ec59_10135466($_smarty_tpl) {?><html>
 	<head>
 		<meta name="viewport" content="width = device-width, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no">
 		<meta charset="utf-8">
@@ -35,17 +60,19 @@
 		<script type="text/javascript" src="js/datePicker.js"></script>
 	</head>
 	<body>
-		{include file='template/index_others.tpl'}
-		{include file='template/include/header.tpl'}
+		<?php echo $_smarty_tpl->getSubTemplate ('template/index_others.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+		<?php echo $_smarty_tpl->getSubTemplate ('template/include/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 
 		<div id="exportTabContent" class="tab-content container">
-				{if isset($droits) && ($droits.pdf == 1)}
+				<?php if (isset($_smarty_tpl->tpl_vars['droits']->value)&&($_smarty_tpl->tpl_vars['droits']->value['pdf']==1)) {?>
 					<ul id="exportTab" class="nav nav-tabs col-md-4">
-						{if isset($droits) && $droits.pdf == 1}
+						<?php if (isset($_smarty_tpl->tpl_vars['droits']->value)&&$_smarty_tpl->tpl_vars['droits']->value['pdf']==1) {?>
 							<li class="active"><a href="#pdfContainer" data-toggle="tab"><span class="glyphicon glyphicon-file"></span> PDF</a></li>
-						{/if}
+						<?php }?>
 					</ul>
-				{/if}
+				<?php }?>
 
 				<div id="pdfContainer" class="tab-pane fade in active">
 					<div class="row">
@@ -78,7 +105,8 @@
 												var prof = $("#prof").val();
 												var minDate = $("#datePickerDeb").val();
 												var maxDate = $("#datePickerFin").val();
-												var url = "index.php?page=heure&annee_scolaire=2013-2014&composante=all&prof={$smarty.session.teachCodeProf}&ajax_pdf&minDate=" + minDate + "&maxDate=" + maxDate + "&" + Math.random();
+												var url = "index.php?page=heure&annee_scolaire=2013-2014&composante=all&prof=<?php echo $_SESSION['teachCodeProf'];?>
+&ajax_pdf&minDate=" + minDate + "&maxDate=" + maxDate + "&" + Math.random();
 
 												$.ajax( {
 													type: "GET",
@@ -125,7 +153,7 @@
 										</script>
 
 										<div class="form-group last" id="pdfButtons">
-										<a id="download-button" class="btn btn-success" download="seances.pdf" {literal}onClick ="downloadPdf(); return true;"{/literal}>Exporter</a>
+										<a id="download-button" class="btn btn-success" download="seances.pdf" onClick ="downloadPdf(); return true;">Exporter</a>
 										</div>
 									</form>
 								</div>
@@ -154,6 +182,8 @@
 				</table>
 			</div>
 
-		{include file='template/include/footer.tpl'}
+		<?php echo $_smarty_tpl->getSubTemplate ('template/include/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 	</body>
 </html>
+<?php }} ?>

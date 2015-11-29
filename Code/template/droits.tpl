@@ -12,14 +12,14 @@
 		<script type="text/javascript" src="js/loadPage.js"></script>
 	</head>
 	<body>
-		
+		{include file='template/index_others.tpl'}
 		{include file='template/include/header.tpl'}
 		<div class="container">
 		<div class="table-responsive" id="vueDroits">
 			<table class="table-striped center-table">
 				<tr>
-				   <th id="thdroittable">Droits</th>
-				   <th>Activation</th>
+				   <th style="background:#BDBDBD" id="thdroittable">Droits</th>
+				   <th style="background:#BDBDBD">Activation</th>
 				</tr>
 			    <tr>
 				   <td id="thdroittable">Administrateur</td>

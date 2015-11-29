@@ -13,7 +13,7 @@
 		<script type="text/javascript" src="js/admin.js"></script>
 	</head>
 	<body>
-		
+		{include file='template/index_others.tpl'}
 		{include file='template/include/header.tpl'}
 		<div class="container">
 			<div class="col-md-6 col-centered">

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-11-29 14:50:50
+<?php /* Smarty version Smarty-3.1.18, created on 2015-11-29 17:17:10
          compiled from "template\agendas_ics.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:29370565b02ba42d108-45684011%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '06478f0ec06c262c7881b417e1a0d0af921c4dc6' => 
     array (
       0 => 'template\\agendas_ics.tpl',
-      1 => 1448743984,
+      1 => 1448813543,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_565b02ba608a85_38412831',
   'variables' => 
   array (
     'loginStudy' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_565b02ba608a85_38412831',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_565b02ba608a85_38412831')) {function content_565b02ba608a85_38412831($_smarty_tpl) {?><html>
     <head>
@@ -61,6 +61,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     </head>
     <body>
+		<?php echo $_smarty_tpl->getSubTemplate ('template/index_others.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
         <?php echo $_smarty_tpl->getSubTemplate ('template/include/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 

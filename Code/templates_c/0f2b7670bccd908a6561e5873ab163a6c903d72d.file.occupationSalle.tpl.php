@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-11-29 14:50:24
+<?php /* Smarty version Smarty-3.1.18, created on 2015-11-29 17:06:21
          compiled from "template\occupationSalle.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:28064565b01d6cf3ae1-73356152%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0f2b7670bccd908a6561e5873ab163a6c903d72d' => 
     array (
       0 => 'template\\occupationSalle.tpl',
-      1 => 1448805014,
+      1 => 1448813179,
       2 => 'file',
     ),
   ),
@@ -46,7 +46,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<script type="text/javascript" src="API/tableExport/jquery.base64.js"></script>
 	</head>
 	<body>
-		
+		<?php echo $_smarty_tpl->getSubTemplate ('template/index_others.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 		<?php echo $_smarty_tpl->getSubTemplate ('template/include/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 		
@@ -57,7 +58,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<br>
 			<table class="table-striped table center-table footable" id="tableOccSalle">
 				<thead>
-					<tr>
+					<tr style="background:#BDBDBD">
 						<th>Salle</th>
 						<th data-hide="phone,tablet" data-sort-ignore="true">Séance (en heure)</th>
 						<th data-hide="phone,tablet" data-sort-ignore="true">Réservation (en heure)</th>

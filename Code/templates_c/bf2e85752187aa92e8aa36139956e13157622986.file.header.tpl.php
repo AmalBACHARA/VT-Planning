@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-11-29 12:16:40
+<?php /* Smarty version Smarty-3.1.18, created on 2015-11-29 17:41:29
          compiled from "template\include\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:13557565ade98416ea7-27839950%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bf2e85752187aa92e8aa36139956e13157622986' => 
     array (
       0 => 'template\\include\\header.tpl',
-      1 => 1448743984,
+      1 => 1448815286,
       2 => 'file',
     ),
   ),
@@ -15,22 +15,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_565ade9859e1c3_86067115',
   'variables' => 
   array (
-    'teachLogin' => 0,
     'firstName' => 0,
     'userName' => 0,
+    'teachLogin' => 0,
     'droits' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_565ade9859e1c3_86067115',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_565ade9859e1c3_86067115')) {function content_565ade9859e1c3_86067115($_smarty_tpl) {?><nav class="navbar navbar-default" id="headerProjet" role="navigation">
   <div class="container-fluid">
-    <?php if (isset($_smarty_tpl->tpl_vars['teachLogin']->value)) {?>
-      <a class="navbar-brand" id="panelCalendar"><span class="glyphicon glyphicon-list"></span></a>
-    <?php }?>
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" id="boutonNavBar" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">

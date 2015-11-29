@@ -36,7 +36,7 @@
 
     </head>
     <body>
-
+		{include file='template/index_others.tpl'}
         {include file='template/include/header.tpl'}
         <div class="container">
         {if isset($loginStudy)}

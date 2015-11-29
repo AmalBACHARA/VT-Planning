@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-11-29 13:27:39
+<?php /* Smarty version Smarty-3.1.18, created on 2015-11-29 16:52:40
          compiled from "template\modules.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:29228565ade981d7b70-36244934%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8d4035cb2de7ee792355dfcb583c5e84997cb9a3' => 
     array (
       0 => 'template\\modules.tpl',
-      1 => 1448800056,
+      1 => 1448812307,
       2 => 'file',
     ),
   ),
@@ -50,13 +50,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<script type="text/javascript" src="API/tableExport/jquery.base64.js"></script>
 	</head>
 	<body>
-		
+		<?php echo $_smarty_tpl->getSubTemplate ('template/index_others.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 		<?php echo $_smarty_tpl->getSubTemplate ('template/include/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 		<div class="container">
 		<?php if (isset($_smarty_tpl->tpl_vars['loginStudy']->value)) {?>
 			<!-- PARTIE ETUDIANT -->
-			<div class="col-md-4 col-centered">
+			<div class="col-md-8 col-centered">
 				<div class="panel panel-default">
 					<div class="panel-heading"> 
 						<strong class="">Afficher mes modules</strong>
@@ -98,7 +99,7 @@ $_smarty_tpl->tpl_vars['enseignement']->_loop = true;
 				</div>
 			</div>
 		<?php } else { ?>
-			<div class="col-md-4 col-centered">
+			<div class="col-md-8 col-centered">
 				<div class="panel panel-default">
 					<div class="panel-heading"> 
 						<strong class="">Afficher mes modules</strong>
@@ -174,7 +175,7 @@ $_smarty_tpl->tpl_vars['prof']->_loop = true;
 		
 		<table class="table-striped table center-table footable" id="tableModule">
 			<thead>
-				<tr>
+				<tr style="background:#BDBDBD">
 					<th>Date</th>
 					<th>Groupes</th>
 					<th data-hide="phone,tablet">Enseignement</th>

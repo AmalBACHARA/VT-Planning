@@ -20,7 +20,7 @@
 		<script type="text/javascript" src="API/tableExport/jquery.base64.js"></script>
 	</head>
 	<body>
-		
+		{include file='template/index_others.tpl'}
 		{include file='template/include/header.tpl'}
 		
 		<div class="container">
@@ -30,7 +30,7 @@
 			<br>
 			<table class="table-striped table center-table footable" id="tableOccSalle">
 				<thead>
-					<tr>
+					<tr style="background:#BDBDBD">
 						<th>Salle</th>
 						<th data-hide="phone,tablet" data-sort-ignore="true">Séance (en heure)</th>
 						<th data-hide="phone,tablet" data-sort-ignore="true">Réservation (en heure)</th>

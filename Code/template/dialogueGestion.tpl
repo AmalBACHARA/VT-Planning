@@ -16,13 +16,14 @@
 		<script type="text/javascript" src="js/filterTable.js"></script>
 	</head>
 	<body>
+	{include file='template/index_others.tpl'}
 		{include file='template/include/header.tpl'}
 		<div class="container">
 		{foreach from=$composantes item=composante}
 			<h2>{$composante.nom}</h2>
 			<table class="table center-table col-sm-9 footable">
 				<thead>
-					<tr>
+					<tr style="background:#BDBDBD">
 						<th>Grade</th>
 						<th data-hide="phone,tablet">Nom des enseignants</th>
 						<th data-hide="phone,tablet" data-sort-ignore="true">Horaires statuaires</th>

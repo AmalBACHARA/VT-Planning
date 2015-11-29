@@ -130,8 +130,8 @@ h4 {
 }
 
 #monPlanning {
-   
-    padding: 8px 90px 8px 90px;
+   width:170px;
+   text-align:center;
     margin: auto;
     margin-top: 50px;
 }
