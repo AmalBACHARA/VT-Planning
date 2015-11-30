@@ -58,7 +58,7 @@ $(document).ready(function()
                 if (elem.connexion === true)
 				{
                     // connexion réussie
-                    window.location.replace('index.php');
+                    window.location.replace('index.php?page=index');
                 }
 				else
 				{

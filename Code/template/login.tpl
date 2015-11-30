@@ -31,7 +31,7 @@
 
 			<div id="teachContainer" class="tab-pane fade in active">
 				<div class="row">
-					<div class="col-md-4 col-centered">
+					<div class="col-md-6 col-centered">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<strong class="">Planning des enseignants</strong>
@@ -52,14 +52,14 @@
 									</div>
 									<!--
 									<div class="form-group last" id="teachButtons">
-										<button type="reset" class="btn btn-danger btn-md col-md-6">Annuler</button>
-										<button type="submit" class="btn btn-success btn-md col-md-6">Valider</button>
+										<button type="reset" class="btn btn-default btn-md col-md-6">Annuler</button>
+										<button type="submit" class="btn btn-primary btn-md col-md-6">Valider</button>
 									</div>
 									-->
 									<div class="form-group" id="teachButtons">
 										<div class="btn-group col-xs-12">
-											<button type="reset" class="btn btn-danger col-xs-6" data-dismiss="modal">Annuler</button>
-											<button type="submit" class="btn btn-success col-xs-6">Valider</button>
+											<button type="reset" class="btn btn-default col-xs-6" data-dismiss="modal">Annuler</button>
+											<button type="submit" class="btn btn-primary col-xs-6">Valider</button>
 										</div>
 									</div>
 								</form>
@@ -74,7 +74,7 @@
 			</div>
 			<div id="studyContainer" class="container tab-pane fade in">
 				<div class="row">
-					<div class="col-md-4 col-centered">
+					<div class="col-md-6 col-centered">
 						<div class="panel panel-default">
 							<div class="panel-heading"> <strong class="">Planning des étudiants</strong>
 
@@ -90,8 +90,8 @@
 
 									<div class="form-group" id="studyButtons">
 										<div class="btn-group col-xs-12">
-											<button type="reset" class="btn btn-danger col-xs-6" data-dismiss="modal">Annuler</button>
-											<button type="submit" class="btn btn-success col-xs-6">Valider</button>
+											<button type="reset" class="btn btn-default col-xs-6" data-dismiss="modal">Annuler</button>
+											<button type="submit" class="btn btn-primary col-xs-6">Valider</button>
 										</div>
 									</div>
 								</form>
@@ -142,8 +142,8 @@
 					</div>
 				  </div>
 				  <div class="modal-footer">
-					<button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
-					<button type="submit" class="btn btn-success">Valider</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+					<button type="submit" class="btn btn-primary">Valider</button>
 				  </div>
 				</div>
 			</form>

@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-11-29 17:57:44
+<?php /* Smarty version Smarty-3.1.18, created on 2015-11-30 11:27:12
          compiled from "template\include\calendar.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:18083565adfeff00410-01353997%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:16484565bfad512bcd0-00940612%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '6304817a5733636ad006c7a91f1bffdec9371cbb' => 
     array (
       0 => 'template\\include\\calendar.tpl',
-      1 => 1448816262,
+      1 => 1448879230,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '18083565adfeff00410-01353997',
+  'nocache_hash' => '16484565bfad512bcd0-00940612',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_565adfeff0b0c3_20030833',
+  'unifunc' => 'content_565bfad5262302_63501662',
   'variables' => 
   array (
     'code' => 0,
@@ -28,21 +28,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'composante' => 0,
     'profs' => 0,
     'prof' => 0,
-    'departements' => 0,
-    'departement' => 0,
     'salles' => 0,
     'salle' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_565adfeff0b0c3_20030833')) {function content_565adfeff0b0c3_20030833($_smarty_tpl) {?><!--
+<?php if ($_valid && !is_callable('content_565bfad5262302_63501662')) {function content_565bfad5262302_63501662($_smarty_tpl) {?><!--
 div id="panelFilter">
 </div>
 -->
+
 <?php echo $_smarty_tpl->getSubTemplate ('template/index_others.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
-	<div class="col-lg-2 col-sm-2">
+<div class="col-lg-2 col-sm-2">
     <button class="btn btn-primary" id="monPlanning" type="submit" onClick='reset(<?php echo $_smarty_tpl->tpl_vars['code']->value;?>
 )'>Mon planning</button>
  <!--</form>-->
@@ -141,27 +140,9 @@ $_smarty_tpl->tpl_vars['prof']->_loop = true;
     
     <div class="col-md-12 col-centered">
 	<div class="panel panel-default">
-	    <div class="panel-heading"> 
-                <form class="form-horizontal" role="form">
-		    <div class="form-group">
-			<label for="departementFilter" class="col-md-12">Salles</label>
-			    <div class="col-md-12">
-				<select name="departementFilter" class="form-control" id="departementFilter" required="" onChange="loadSallesListFilter()">
-				    <option value="all" selected>TOUS</option>
-                                    <?php  $_smarty_tpl->tpl_vars['departement'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['departement']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['departements']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['departement']->key => $_smarty_tpl->tpl_vars['departement']->value) {
-$_smarty_tpl->tpl_vars['departement']->_loop = true;
-?>
-					<option value=<?php echo $_smarty_tpl->tpl_vars['departement']->value['codeZoneSalle'];?>
-><?php echo $_smarty_tpl->tpl_vars['departement']->value['nom_zone'];?>
-</option>
-				    <?php } ?>
-				</select>
-                            </div>
-			</div>
-                </form>                                     
-	    </div>
+	<label for="departementFilter" class="col-md-12">Salles</label>
+	    
+              
 	    <div class="panel-body">
 		<form class="form-horizontal" role="form">
 		    <div class="form-group">
@@ -224,6 +205,7 @@ $_smarty_tpl->tpl_vars['salle']->_loop = true;
 			
 		<div class="col-md-6" id="h3MoisAnnee">
 			<h3 class=""></h3>
+			<h4 class="" id="petitH4Bis"></h4>
 		</div>
 	</div>
 	<!-- Fin navigation calendar -->
@@ -236,53 +218,7 @@ $_smarty_tpl->tpl_vars['salle']->_loop = true;
 	</div>
 	<!-- Fin Calendar -->
 	
-	<!-- Debut légende -->
-	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-		<div class="panel panel-default">
-			<div data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="panel-heading" role="tab" id="headingOne">
-				<h4 class="panel-title">
-					<a id="collapseTitleLegende">Légende des événements</a>
-				</h4>
-			</div>
-			<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-				<div class="panel-body">   
-					<div id="calendarLegende">
-						<div class="row">
-							<div class="col-xs-3 col-md-2">
-								<div class="cercleLegende" id="cercleCM"></div>
-								<div class="textLegende">Cours</div>
-							</div>
-							<div class="col-xs-3 col-md-2">
-								<div class="cercleLegende" id="cercleTD"></div>
-								<div class="textLegende">TD</div>
-							</div>
-							<div class="col-xs-3 col-md-2">
-								<div class="cercleLegende" id="cercleTP"></div>
-								<div class="textLegende">TP</div>
-							</div>
-							<div class="col-xs-3 col-md-2">
-								<div class="cercleLegende" id="cercleDS"></div>
-								<div class="textLegende">DS</div>
-							</div>
-							<div class="col-xs-3 col-md-2">
-								<div class="cercleLegende" id="cercleTUT"></div>
-								<div class="textLegende">Tutorat</div>
-							</div>
-							<div class="col-xs-3 col-md-2">
-								<div class="cercleLegende" id="cerclePRO"></div>
-								<div class="textLegende">PRO</div>
-							</div>
-							<div class="col-xs-3 col-md-2">
-								<div class="cercleLegende" id="cercleADM"></div>
-								<div class="textLegende">Administration</div>
-							</div>
-						</div>
-					</div>   
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Fin légende -->
+	
 	<!-- Début Modal -->
 	<div class="clearfix"></div>
 	<div class="modal fade" id="events-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -303,7 +239,6 @@ $_smarty_tpl->tpl_vars['salle']->_loop = true;
 	<!-- Fon Modal -->
 </div>
 <script>
-console.log("calendar.tpl");
 </script>
 <script type="text/javascript" src="API/bootstrap-calendar-master/js/app.js"></script>
 <script type="text/javascript" src="js/CalendarResize.js"></script>

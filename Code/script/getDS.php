@@ -30,15 +30,7 @@
 		//traduction francais du nom du jour
 		$nom_jour = translateDay($nom_jour);
 		
-		unset($req_type);
-		$sqlType="SELECT * FROM types_activites WHERE codeTypeActivite=".$res_4['codeTypeActivite'];
-		$req_type=$dbh->prepare($sqlType);	
-		$req_type->execute();		  
-		while($res_type = $req_type->fetch())
-		{
-			$nom_type_seance = $res_type['alias'];
-		}
-		$req_type->closeCursor();
+		$nom_type_seance = $res_4['alias'];
 		
 		// enseignement
 		$type=explode("_",$res_4['nom_enseignement']);

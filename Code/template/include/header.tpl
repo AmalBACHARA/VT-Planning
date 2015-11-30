@@ -1,5 +1,6 @@
 <nav class="navbar navbar-default" id="headerProjet" role="navigation">
   <div class="container-fluid">
+ 
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" id="boutonNavBar" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -64,7 +65,6 @@
 				<!-- l'utilisateur connecté est un étudiant -->
 				<ul class="dropdown-menu" role="menu">
 					<li onClick="loadExport()"><a href="#"><span class="glyphicon glyphicon-file"></span> Export </a></li>
-					<li onClick="loadMesDS()"><a href="#"><span class="glyphicon glyphicon-pencil"></span> Mes DS</a></li>
 					<li onClick="loadModule()"><a href="#"><span class="glyphicon glyphicon-th-large"></span> Mes Modules</a></li>
 					<li onClick="loadRSS()"><a href="#"><span class="glyphicon glyphicon-transfer"></span> Flux RSS</a></li>
 				</ul>

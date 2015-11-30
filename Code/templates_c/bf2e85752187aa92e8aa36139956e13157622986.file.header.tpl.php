@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-11-29 17:41:29
+<?php /* Smarty version Smarty-3.1.18, created on 2015-11-30 08:50:30
          compiled from "template\include\header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:13557565ade98416ea7-27839950%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:23031565bfad4f33015-22818689%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'bf2e85752187aa92e8aa36139956e13157622986' => 
     array (
       0 => 'template\\include\\header.tpl',
-      1 => 1448815286,
+      1 => 1448869826,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '13557565ade98416ea7-27839950',
+  'nocache_hash' => '23031565bfad4f33015-22818689',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_565ade9859e1c3_86067115',
+  'unifunc' => 'content_565bfad511b8f5_88373254',
   'variables' => 
   array (
     'firstName' => 0,
@@ -26,8 +26,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_565ade9859e1c3_86067115')) {function content_565ade9859e1c3_86067115($_smarty_tpl) {?><nav class="navbar navbar-default" id="headerProjet" role="navigation">
+<?php if ($_valid && !is_callable('content_565bfad511b8f5_88373254')) {function content_565bfad511b8f5_88373254($_smarty_tpl) {?><nav class="navbar navbar-default" id="headerProjet" role="navigation">
   <div class="container-fluid">
+ 
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" id="boutonNavBar" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -94,7 +95,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<!-- l'utilisateur connecté est un étudiant -->
 				<ul class="dropdown-menu" role="menu">
 					<li onClick="loadExport()"><a href="#"><span class="glyphicon glyphicon-file"></span> Export </a></li>
-					<li onClick="loadMesDS()"><a href="#"><span class="glyphicon glyphicon-pencil"></span> Mes DS</a></li>
 					<li onClick="loadModule()"><a href="#"><span class="glyphicon glyphicon-th-large"></span> Mes Modules</a></li>
 					<li onClick="loadRSS()"><a href="#"><span class="glyphicon glyphicon-transfer"></span> Flux RSS</a></li>
 				</ul>

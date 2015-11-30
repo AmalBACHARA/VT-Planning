@@ -7,7 +7,7 @@ function loadConfig() {
 }
 
 function loadIndex() {
-    window.location.replace('index.php');
+    window.location.replace('index.php?page=index');
 }
 
 function loadModule() {
@@ -44,10 +44,6 @@ function loadVersion() {
 
 function loadDialogue() {
     window.location.replace('index.php?page=dialogue');
-}
-
-function loadMesDS() {
-    window.location.replace('index.php?page=mesDS');
 }
 
 function loadAgendasICS() {

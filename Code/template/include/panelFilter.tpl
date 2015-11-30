@@ -1,5 +1,5 @@
 <div id="panelFilter">
- <!--<form class="form-horizontal" role="form" onSubmit='return reset({$code})'>-->
+ <div class="col-lg-2 col-sm-2">
     <button class="btn btn-primary" id="monPlanning" type="submit" onClick='reset({$code})'>Mon planning</button>
  <!--</form>-->
     <div class="col-md-12 col-centered">
@@ -75,7 +75,14 @@
                 <form class="form-horizontal" role="form">
 		    <div class="form-group">
 			<label for="departementFilter" class="col-md-12">Salles</label>
-			    
+			    <div class="col-md-12">
+				<select name="departementFilter" class="form-control" id="departementFilter" required="" onChange="loadSallesListFilter()">
+				    <option value="all" selected>TOUS</option>
+                                    {foreach from=$departements item=departement}
+					<option value={$departement.codeZoneSalle}>{$departement.nom_zone}</option>
+				    {/foreach}
+				</select>
+                            </div>
 			</div>
                 </form>                                     
 	    </div>
@@ -95,4 +102,5 @@
             </div>
         </div>
     </div>
+</div>
 </div>

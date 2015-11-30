@@ -60,6 +60,7 @@ if (isset($_SESSION['studyLogin']) || isset($_SESSION['teachLogin']))
 	
 	if (isset($_GET['page']))
 	{
+
 		// NAVIGATION ETUDIANT
 		if (isset($_SESSION['studyLogin']))
 		{
@@ -87,12 +88,7 @@ if (isset($_SESSION['studyLogin']) || isset($_SESSION['teachLogin']))
 				$smarty->assign("xml",$xml);
 				$smarty->display("template/rss.tpl");
 			}
-			else if ($_GET['page'] == "mesDS")
-			{
-				include('script/getDS.php');
-				$smarty->assign("mesDS", $mesDS);
-				$smarty->display("template/mesDS.tpl");
-			}
+			
 			else if ($_GET['page'] == "version")
 			{
 				$smarty->display("template/versions.tpl");
@@ -106,9 +102,9 @@ if (isset($_SESSION['studyLogin']) || isset($_SESSION['teachLogin']))
 				$smarty->display("template/agendas_ics.tpl");
 				//$smarty->display('');
 			}
-			else
+			else 
 			{
-				$smarty->display("template/index.tpl");
+				$smarty->display("template/index_study.tpl");
 			}
 		}
 		else

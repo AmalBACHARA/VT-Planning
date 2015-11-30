@@ -146,7 +146,7 @@ Create a simple table (don't forget to set the data attributes for each column i
 3. **Include jQuery**
 
     ```html
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="text/javascript"></script>
 ```
 
 4. **Include FooTable jQuery Plugin**

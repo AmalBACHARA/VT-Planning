@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-11-29 14:41:16
+<?php /* Smarty version Smarty-3.1.18, created on 2015-11-30 08:34:35
          compiled from "template\login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:16530565b007cc95311-83019801%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:12162565bfc0b5a01e2-99941482%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0da2a0e028d1bc00a816b89c727782b518d6e062' => 
     array (
       0 => 'template\\login.tpl',
-      1 => 1448743984,
+      1 => 1448817494,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '16530565b007cc95311-83019801',
+  'nocache_hash' => '12162565bfc0b5a01e2-99941482',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_565b007ccfce45_69222598',
+  'unifunc' => 'content_565bfc0b5dbab8_73910286',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_565b007ccfce45_69222598')) {function content_565b007ccfce45_69222598($_smarty_tpl) {?><html>
+<?php if ($_valid && !is_callable('content_565bfc0b5dbab8_73910286')) {function content_565bfc0b5dbab8_73910286($_smarty_tpl) {?><html>
 	<head>
 		<meta name="viewport" content="width = device-width, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no">
 		<meta charset="utf-8">
@@ -52,7 +52,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 			<div id="teachContainer" class="tab-pane fade in active">
 				<div class="row">
-					<div class="col-md-4 col-centered">
+					<div class="col-md-6 col-centered">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<strong class="">Planning des enseignants</strong>
@@ -73,14 +73,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 									</div>
 									<!--
 									<div class="form-group last" id="teachButtons">
-										<button type="reset" class="btn btn-danger btn-md col-md-6">Annuler</button>
-										<button type="submit" class="btn btn-success btn-md col-md-6">Valider</button>
+										<button type="reset" class="btn btn-default btn-md col-md-6">Annuler</button>
+										<button type="submit" class="btn btn-primary btn-md col-md-6">Valider</button>
 									</div>
 									-->
 									<div class="form-group" id="teachButtons">
 										<div class="btn-group col-xs-12">
-											<button type="reset" class="btn btn-danger col-xs-6" data-dismiss="modal">Annuler</button>
-											<button type="submit" class="btn btn-success col-xs-6">Valider</button>
+											<button type="reset" class="btn btn-default col-xs-6" data-dismiss="modal">Annuler</button>
+											<button type="submit" class="btn btn-primary col-xs-6">Valider</button>
 										</div>
 									</div>
 								</form>
@@ -95,7 +95,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			</div>
 			<div id="studyContainer" class="container tab-pane fade in">
 				<div class="row">
-					<div class="col-md-4 col-centered">
+					<div class="col-md-6 col-centered">
 						<div class="panel panel-default">
 							<div class="panel-heading"> <strong class="">Planning des étudiants</strong>
 
@@ -111,8 +111,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 									<div class="form-group" id="studyButtons">
 										<div class="btn-group col-xs-12">
-											<button type="reset" class="btn btn-danger col-xs-6" data-dismiss="modal">Annuler</button>
-											<button type="submit" class="btn btn-success col-xs-6">Valider</button>
+											<button type="reset" class="btn btn-default col-xs-6" data-dismiss="modal">Annuler</button>
+											<button type="submit" class="btn btn-primary col-xs-6">Valider</button>
 										</div>
 									</div>
 								</form>
@@ -163,8 +163,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					</div>
 				  </div>
 				  <div class="modal-footer">
-					<button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
-					<button type="submit" class="btn btn-success">Valider</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+					<button type="submit" class="btn btn-primary">Valider</button>
 				  </div>
 				</div>
 			</form>

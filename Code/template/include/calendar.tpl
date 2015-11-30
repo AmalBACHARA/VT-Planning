@@ -2,9 +2,10 @@
 div id="panelFilter">
 </div>
 -->
+
 {include file='template/index_others.tpl'}
 
-	<div class="col-lg-2 col-sm-2">
+<div class="col-lg-2 col-sm-2">
     <button class="btn btn-primary" id="monPlanning" type="submit" onClick='reset({$code})'>Mon planning</button>
  <!--</form>-->
     <div class="col-md-12 col-centered">
@@ -76,21 +77,9 @@ div id="panelFilter">
     
     <div class="col-md-12 col-centered">
 	<div class="panel panel-default">
-	    <div class="panel-heading"> 
-                <form class="form-horizontal" role="form">
-		    <div class="form-group">
-			<label for="departementFilter" class="col-md-12">Salles</label>
-			    <div class="col-md-12">
-				<select name="departementFilter" class="form-control" id="departementFilter" required="" onChange="loadSallesListFilter()">
-				    <option value="all" selected>TOUS</option>
-                                    {foreach from=$departements item=departement}
-					<option value={$departement.codeZoneSalle}>{$departement.nom_zone}</option>
-				    {/foreach}
-				</select>
-                            </div>
-			</div>
-                </form>                                     
-	    </div>
+	<label for="departementFilter" class="col-md-12">Salles</label>
+	    
+              
 	    <div class="panel-body">
 		<form class="form-horizontal" role="form">
 		    <div class="form-group">
@@ -147,6 +136,7 @@ div id="panelFilter">
 			
 		<div class="col-md-6" id="h3MoisAnnee">
 			<h3 class=""></h3>
+			<h4 class="" id="petitH4Bis"></h4>
 		</div>
 	</div>
 	<!-- Fin navigation calendar -->
@@ -159,53 +149,7 @@ div id="panelFilter">
 	</div>
 	<!-- Fin Calendar -->
 	
-	<!-- Debut légende -->
-	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-		<div class="panel panel-default">
-			<div data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="panel-heading" role="tab" id="headingOne">
-				<h4 class="panel-title">
-					<a id="collapseTitleLegende">Légende des événements</a>
-				</h4>
-			</div>
-			<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-				<div class="panel-body">   
-					<div id="calendarLegende">
-						<div class="row">
-							<div class="col-xs-3 col-md-2">
-								<div class="cercleLegende" id="cercleCM"></div>
-								<div class="textLegende">Cours</div>
-							</div>
-							<div class="col-xs-3 col-md-2">
-								<div class="cercleLegende" id="cercleTD"></div>
-								<div class="textLegende">TD</div>
-							</div>
-							<div class="col-xs-3 col-md-2">
-								<div class="cercleLegende" id="cercleTP"></div>
-								<div class="textLegende">TP</div>
-							</div>
-							<div class="col-xs-3 col-md-2">
-								<div class="cercleLegende" id="cercleDS"></div>
-								<div class="textLegende">DS</div>
-							</div>
-							<div class="col-xs-3 col-md-2">
-								<div class="cercleLegende" id="cercleTUT"></div>
-								<div class="textLegende">Tutorat</div>
-							</div>
-							<div class="col-xs-3 col-md-2">
-								<div class="cercleLegende" id="cerclePRO"></div>
-								<div class="textLegende">PRO</div>
-							</div>
-							<div class="col-xs-3 col-md-2">
-								<div class="cercleLegende" id="cercleADM"></div>
-								<div class="textLegende">Administration</div>
-							</div>
-						</div>
-					</div>   
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Fin légende -->
+	
 	<!-- Début Modal -->
 	<div class="clearfix"></div>
 	<div class="modal fade" id="events-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -226,7 +170,6 @@ div id="panelFilter">
 	<!-- Fon Modal -->
 </div>
 <script>
-console.log("calendar.tpl");
 </script>
 <script type="text/javascript" src="API/bootstrap-calendar-master/js/app.js"></script>
 <script type="text/javascript" src="js/CalendarResize.js"></script>

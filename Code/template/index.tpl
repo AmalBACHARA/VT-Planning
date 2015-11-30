@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>VT Agenda - Accueil</title>
 		<link rel="icon" type="image/png" href="img/glyphicons_calendar_title.png"/>
+
 		<link rel="stylesheet" href="css/MyCalendar.css">
 		<link rel="stylesheet" href="API/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="API/bootstrap/css/bootstrap-theme.min.css">
@@ -20,9 +21,11 @@
 		<script type="text/javascript" src="API/hammer.js-master/hammer.js"></script>
 		<script type="text/javascript" src="API/hammer.js-master/jquery.hammer.js"></script>
 		<script type="text/javascript" src="js/MobileSwipeCalendar.js"></script>
+		<link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
+
+
 	</head>
 	<body>
-		{include file='template/include/panelFilter.tpl'}
 		{include file='template/include/header.tpl'}
 		{include file='template/include/calendar.tpl'}
 		{include file='template/include/footer.tpl'}
