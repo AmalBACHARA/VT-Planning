@@ -15,21 +15,10 @@ $out = array();
 //si l'utilisateur est un prof
 if(isset($_SESSION['teachLogin']))
 {
-    $sql='SELECT 
-    seances.dateSeance AS dateSeance, 
-    seances.heureSeance AS heureSeance, 
-    seances.dureeSeance AS dureeSeance, 
-    seances.codeSeance as codeSeance,
-    seances.commentaire as commentaire,
-    matieres.nom AS nomMatiere,
-    matieres.type AS typeMatiere, 
-    matieres.couleurFond as couleurMatiere,
-    ressources_salles.nom AS nomSalle,
-    ressources_salles.alias AS aliasSalle,
-    ressources_groupes.nom AS nomGroupe,
-    ressources_salles.codeSalle AS codeSalle,
-    ressources_groupes.codeGroupe AS codeGroupe
-                    
+    $sql='SELECT distinct seances.dateSeance, seances.heureSeance, seances.dureeSeance,
+                enseignements.nom, enseignements.couleurFond,enseignements.alias,
+                enseignements.codeTypeSalle, types_activites.codeTypeActivite, types_activites.alias,
+                matieres.couleurFond, matieres.nom, login_prof.login, ressources_salles.nom as salle, ressources_groupes.codeGroupe, ressources_salles.codeSalle                                
 FROM   
     enseignements,
     matieres, 
@@ -68,24 +57,35 @@ else
 {
     $sql=sprintf('SELECT distinct seances.dateSeance, seances.heureSeance, seances.dureeSeance,
                 enseignements.nom, enseignements.couleurFond,enseignements.alias,
-                enseignements.codeTypeSalle,
-                matieres.couleurFond, matieres.nom
-                FROM seances
-                inner join seances_groupes on seances.codeSeance=seances_groupes.codeSeance
-                inner join ressources_groupes on seances_groupes.codeRessource = ressources_groupes.codeGroupe
-                inner join ressources_groupes_etudiants on ressources_groupes.codeGroupe = ressources_groupes_etudiants.codeGroupe
-                inner join ressources_etudiants on ressources_groupes_etudiants.codeEtudiant = ressources_etudiants.codeEtudiant
-                inner join enseignements ON seances.codeEnseignement = enseignements.codeEnseignement
-                inner join matieres ON matieres.codeMatiere = enseignements.codeMatiere
-                WHERE seances.deleted =  "0"
-                AND matieres.deleted =  "0"
-                AND seances.annulee =  "0"
-                AND seances_groupes.deleted = "0"
-                AND ressources_groupes.deleted = "0"
-                AND ressources_groupes_etudiants.deleted = "0"
-                AND enseignements.deleted = "0"
-                AND ressources_etudiants.deleted = "0"
-                AND ressources_etudiants.nom = '.$dbh->quote($loginUtilisateur, PDO::PARAM_STR));
+                enseignements.codeTypeSalle, types_activites.codeTypeActivite, types_activites.alias,
+                matieres.couleurFond, matieres.nom                 
+FROM   
+    enseignements,
+    matieres, 
+    seances_groupes,
+    ressources_groupes,
+    ressources_groupes_etudiants,
+    ressources_etudiants,                    
+    seances
+        LEFT OUTER JOIN seances_salles ON ( seances_salles.deleted = 0 AND seances_salles.codeSeance = seances.codeSeance)
+        LEFT OUTER JOIN ressources_salles ON (  ressources_salles.deleted = 0 AND seances_salles.codeRessource = ressources_salles.codeSalle)
+        LEFT OUTER JOIN zones_salles ON (   zones_salles.deleted = 0 AND zones_salles.codeZoneSalle = ressources_salles.codeZoneSalle)
+        LEFT OUTER JOIN seances_profs ON (  seances_profs.deleted = 0 AND seances.codeSeance = seances_profs.codeSeance)
+        LEFT OUTER JOIN ressources_profs ON (   ressources_profs.deleted = 0 AND seances_profs.codeRessource = ressources_profs.codeProf)       
+WHERE   
+    ressources_etudiants.deleted = 0
+    AND seances.deleted = 0
+    AND enseignements.deleted = 0               
+    AND matieres.deleted = 0 
+    AND seances.diffusable = 1
+    AND seances_groupes.deleted = 0 
+    AND ressources_groupes.deleted = 0 
+    AND ressources_groupes_etudiants.deleted = 0                 
+    AND seances.codeEnseignement = enseignements.codeEnseignement AND enseignements.codeMatiere = matieres.codeMatiere 
+    AND seances.codeSeance = seances_groupes.codeSeance  AND seances_groupes.codeRessource = ressources_groupes.codeGroupe  
+    AND ressources_groupes.codeGroupe = ressources_groupes_etudiants.codeGroupe
+    AND ressources_groupes_etudiants.codeEtudiant = ressources_etudiants.codeEtudiant
+    AND ressources_etudiants.nom='..$dbh->quote($loginUtilisateur, PDO::PARAM_STR).'ORDER BY dateSeance');
 }
 
 $req = $dbh->prepare($sql);
@@ -109,11 +109,46 @@ while($ligneCode = $req->fetch())
     $timeDebut = strtotime($debut); // on convertie la du date de debut en seconde
     $timeFin = $timeDebut + $heureDuree;
 
-    
+    if($ligneCode['codeTypeActivite'] == 1) //CM
+    {
+        $eventC = 'event-info';
+    }
+    else if($ligneCode['codeTypeActivite'] == 2) //TD
+    {
+        $eventC = 'event-warning';
+    }
+    else if($ligneCode['codeTypeActivite'] == 3) //TP
+    {
+        $eventC = 'event-success';
+    }
+    else if($ligneCode['codeTypeActivite'] == 4) //PRO
+    {
+       $eventC = 'event-simple';
+    }
+    else if($ligneCode['codeTypeActivite'] == 6) //STA
+    {
+        $eventC = 'event-info';
+    }
+    else if($ligneCode['codeTypeActivite'] == 7) //ADM
+    {
+        $eventC = 'event-special';
+    }
+    else if($ligneCode['codeTypeActivite'] == 8) //TUT
+    {
+        $eventC = 'event-inverse';
+    }
+    else if($ligneCode['codeTypeActivite'] == 9) //DS
+    {
+        $eventC = 'event-important';
+    }
+    else if($ligneCode['codeTypeActivite'] == 11) //TP APP
+    {
+        $eventC = 'event-success';
+    }
        
     $out[] = array(
-        'id' => $ligneCode['nomMatiere']." -TEST ". $ligneCode["nomSalle"]. "et ".$ligneCode["codeGroupe"],
-        'title' =>$ligneCode['aliasSalle'] ." - ". str_replace(" ", "h",date("H i",$timeDebut)) ." - ". str_replace(" ", "h",date("H i",$timeFin)) ." ". $ligneCode['nomMatiere']." (".$ligneCode['nomSalle'].")",
+        'id' => $ligneCode['nom']." -TEST ". $ligneCode["salle"]. "et ".$ligneCode["codeGroupe"],
+        'title' =>$ligneCode['alias'] ." - ". str_replace(" ", "h",date("H i",$timeDebut)) ." - ". str_replace(" ", "h",date("H i",$timeFin)) ." ". $ligneCode['nom']." (".$ligneCode['salle'].")",
         'url' => "",
         'class' => $eventC,
         'start' => $timeDebut*1000,
@@ -125,31 +160,4 @@ echo json_encode(array('success' => 1, 'result' => $out));
 $req->closeCursor();
 exit;
 
-
-/*
-*
-* Sans connection a la bdd
-*
-*/
-/*
-$out = array();
- 
- for($i=1; $i<=15; $i++){   //from day 01 to day 15
-    $data = date('Y-m-d', strtotime("+".$i." days"));
-    $out[] = array(
-        'id' => $i,
-        'title' => 'Event name '.$i,
-        'url' => "",
-        'class' => 'event-important',
-        'start' => strtotime($data).'000',
-        'end' => strtotime($data).'999'
-    );
-}
-//print_r($out);
-echo json_encode(array('success' => 1, 'result' => $out));
-exit;
-*/
 ?>
-<script>
-console.log("event");
-</script>
