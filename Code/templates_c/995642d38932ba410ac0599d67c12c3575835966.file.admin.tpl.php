@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-11-30 09:10:52
+<?php /* Smarty version Smarty-3.1.18, created on 2015-12-03 15:40:48
          compiled from "template\admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8347565c048c005d13-02298666%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '995642d38932ba410ac0599d67c12c3575835966' => 
     array (
       0 => 'template\\admin.tpl',
-      1 => 1448813577,
+      1 => 1449150069,
       2 => 'file',
     ),
   ),
@@ -15,14 +15,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_565c048c117426_96955176',
   'variables' => 
   array (
     'allTeachers' => 0,
     'teacher' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_565c048c117426_96955176',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_565c048c117426_96955176')) {function content_565c048c117426_96955176($_smarty_tpl) {?><html>
 	<head>
