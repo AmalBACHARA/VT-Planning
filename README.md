@@ -25,9 +25,10 @@ Nous allons changer les technologies utilisées si besoin pour le rendre réutil
  - Récupération de l'API du groupe R4  - Checked !
  - Complément de l'API du groupe R4 - Checked ! 
  - Implémentation de l'API - Checked !  
- - Gestion des flux RSS - Checked ! 
+ - Gestion des flux RSS - Unchecked ! 
  - Wiki - En cours
  - Entretien avec le prof et le groupe R4 - Checked ! 
  - Annulation de l'utilisation de l'API et NodeJs (cf. Issue #1)
  - Complément de l'API du groupe R4 annulé 
  - Vérification des requêtes de l'ancienne base - Checked ! 
+ - Correction du bug de la page de l'étudiant lorsqu'il se connecte - Checked ! (utiliser l'ancienne version pour constater l'erreur PHP)
